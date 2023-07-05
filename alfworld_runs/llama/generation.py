@@ -98,7 +98,7 @@ class LLaMA:
                 pass
             # print(t)
             decoded.append(self.tokenizer.decode(t))
-        return decoded# , concat_h
+        return decoded[0].replace(prompts[0], "").strip()
 
 
     @torch.no_grad()

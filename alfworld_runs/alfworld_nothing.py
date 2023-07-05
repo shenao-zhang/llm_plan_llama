@@ -20,9 +20,9 @@ from llama import *
 from pathlib import Path
 import torch
 
-sample_per_node = 3
+sample_per_node = 6
 depth = 2  # depth - 1, as the first layer is not counted
-scale = 1.0
+scale = 0.1
 replan = False
 
 FOLDER = './prompts'
@@ -154,6 +154,7 @@ def alfworld_run(env, base_prompt, value_prompt, memory: List[str], to_print=Tru
         sys.stdout.flush()
     cur_step = 0
     env_value_estimate = 0.0
+    think_action = False
     while cur_step < 50:
         temp_history = [copy.deepcopy(env_history) for _ in range(sample_per_node ** depth)]
         temp_value_history = [copy.deepcopy(env_value_history) for _ in range(sample_per_node ** depth)]
@@ -163,33 +164,42 @@ def alfworld_run(env, base_prompt, value_prompt, memory: List[str], to_print=Tru
             layer_samples = sample_per_node ** dep
             for parent_idx in range(layer_samples):
                 parent_effective_start_idx = sample_per_node ** (depth - dep) * parent_idx
-            #    _, response_list = llm(str(temp_history[parent_effective_start_idx]) + "\n>", stop=['\n'])
-                think_action = True
-                while think_action:
-                    pre_action = generator.generate(prompts=[str(temp_history[parent_effective_start_idx]) + "\n>"],
-                                                     max_gen_len=100, temperature=0.0, top_p=0.9)
-                    think_action = pre_action.startswith('think:')
-
-                    if think_action:
-                        temp_history[parent_effective_start_idx].add("action", pre_action)
-                        temp_history[parent_effective_start_idx].add("observation", 'OK.')
-
                 all_prompts = [str(temp_history[parent_effective_start_idx]) + "\n>" + tt for tt in temp_admissible[parent_effective_start_idx]]
                 response_list = []
                 for action_idx, action_prompt in enumerate(all_prompts):
                     action_prob = generator.get_ll(prefix=str(temp_history[parent_effective_start_idx]) + "\n>",
                                                     prompts=[action_prompt])
                     response_list.append((temp_admissible[parent_effective_start_idx][action_idx], action_prob[0]))
+#                all_probs = generator.get_ll(prefix=str(temp_history[parent_effective_start_idx]) + "\n>", prompts=all_prompts)
+#                for key, val in zip(all_prompts, all_probs):
+#                    response_list.append((key, val))
                 response_list = sorted(response_list, key=lambda x: x[1], reverse=True)
                 print("parent_idx", parent_idx, response_list)
                 value_response = generator.generate(prompts=[str(temp_value_history[parent_effective_start_idx]) + "\n>"],
                                                      max_gen_len=100, temperature=0.0, top_p=0.9)
+                value_response = value_response[0].replace(str(temp_value_history[parent_effective_start_idx]) + "\n>", "")
                 value_response = value_response.split('>')[0].split('\n')[0].strip()
             #    (value_response, _), _ = llm(str(temp_value_history[parent_effective_start_idx]) + "\n>", stop=['\n'], n=1, temperature=0.0)
-                for i, (resp, prob) in enumerate(response_list[:sample_per_node]):
+                for i, (res, probability) in enumerate(response_list[:sample_per_node]):
                     effect_start_idx = parent_effective_start_idx + sample_per_node ** (depth - dep - 1) * i
                     effect_end_idx = parent_effective_start_idx + sample_per_node ** (depth - dep - 1) * (i + 1)
                     for env_id in range(effect_start_idx, effect_end_idx):
+                        if res.startswith('think:'):
+                            think_action = True
+                        resp = res
+                        prob = probability
+                        while think_action:
+                            resp, prob = generate_with_prob(prompts=[str(temp_history[env_id]) + "\n>"], max_gen_len=100, temperature=0.0, top_p=0.9)
+                            resp = resp[0].replace(str(temp_history[env_id]) + "\n>", "")
+                            print("resp", resp, "prob", prob)
+                            prob = prob[0]
+                       #     (resp, prob), _ = llm(str(temp_history[env_id]) + "\n>", stop=['\n'])
+                            if not resp.startswith('think:'):
+                                think_action = False
+                            else:
+                                observation = 'OK.'
+                                temp_history[env_id].add("action", resp)
+                                temp_history[env_id].add("observation", observation)
                         observation, _, _, temp_info = temp_envs[env_id].step([resp])
                         temp_admissible[env_id] = temp_info['admissible_commands'][0]
                         observation = process_ob(observation[0])
@@ -209,7 +219,10 @@ def alfworld_run(env, base_prompt, value_prompt, memory: List[str], to_print=Tru
                             value_response = generator.generate(
                                 prompts=[str(temp_value_history[env_id]) + "\n>"],
                                 max_gen_len=100, temperature=0.0, top_p=0.9)
+                            print(value_response)
+                            value_response = value_response[0].replace(str(temp_value_history[env_id]) + "\n>", "")
                             value_response = value_response.split('>')[0].split('\n')[0].strip()
+                            print(value_response)
                             #   (value_response, _), _ = llm(str(temp_value_history[env_id]) + "\n>", stop=['\n'], n=1, temperature=0.0)
                             if value_response.startswith('critic:'):
                                 temp_value_history[env_id].add("critic", value_response)
