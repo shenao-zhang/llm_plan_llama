@@ -20,7 +20,7 @@ from llama import *
 from pathlib import Path
 import torch
 
-sample_per_node = 3
+sample_per_node = 5
 depth = 2  # depth - 1, as the first layer is not counted
 scale = 1.0
 replan = False
@@ -58,7 +58,7 @@ def load(ckpt_dir: str, tokenizer_path: str, local_rank: int, world_size: int, m
     with open(Path(ckpt_dir) / "params.json", "r") as f:
         params = json.loads(f.read())
 
-    model_args: ModelArgs = ModelArgs(max_seq_len=2048, max_batch_size=max_batch_size, **params)
+    model_args: ModelArgs = ModelArgs(max_seq_len=5120, max_batch_size=max_batch_size, **params)
     tokenizer = Tokenizer(model_path=tokenizer_path)
     model_args.vocab_size = tokenizer.n_words
     torch.set_default_tensor_type(torch.cuda.HalfTensor)
@@ -169,9 +169,8 @@ def alfworld_run(env, base_prompt, value_prompt, memory: List[str], to_print=Tru
                     pre_action = generator.generate(prompts=[str(temp_history[parent_effective_start_idx]) + "\n>"],
                                                      max_gen_len=100, temperature=0.0, top_p=0.9)
                     think_action = pre_action.startswith('think:')
-
                     if think_action:
-                        temp_history[parent_effective_start_idx].add("action", pre_action)
+                        temp_history[parent_effective_start_idx].add("action", pre_action.split('\n')[0].strip())
                         temp_history[parent_effective_start_idx].add("observation", 'OK.')
 
                 all_prompts = [str(temp_history[parent_effective_start_idx]) + "\n>" + tt for tt in temp_admissible[parent_effective_start_idx]]
@@ -181,7 +180,7 @@ def alfworld_run(env, base_prompt, value_prompt, memory: List[str], to_print=Tru
                                                     prompts=[action_prompt])
                     response_list.append((temp_admissible[parent_effective_start_idx][action_idx], action_prob[0]))
                 response_list = sorted(response_list, key=lambda x: x[1], reverse=True)
-                print("parent_idx", parent_idx, response_list)
+#                print("parent_idx", parent_idx, response_list)
                 value_response = generator.generate(prompts=[str(temp_value_history[parent_effective_start_idx]) + "\n>"],
                                                      max_gen_len=100, temperature=0.0, top_p=0.9)
                 value_response = value_response.split('>')[0].split('\n')[0].strip()
