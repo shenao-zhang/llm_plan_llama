@@ -18,11 +18,11 @@ import time
 from fairscale.nn.model_parallel.initialize import initialize_model_parallel
 from llama import *
 from pathlib import Path
-import torch
+import torch, re
 
-sample_per_node = 5
+sample_per_node = 4
 depth = 2  # depth - 1, as the first layer is not counted
-scale = 1.0
+scale = 0.15
 replan = False
 
 FOLDER = './prompts'
@@ -234,8 +234,9 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
                     for env_id in range(effect_start_idx, effect_end_idx):
                         value_estimate[env_id] = value * gamma ** dep
                         observation, _, _, temp_info = temp_envs[env_id].step([resp])
-                        temp_admissible[env_id] = temp_info['admissible_commands'][0]
                         observation = process_ob(observation[0])
+                        print("plantraj:", resp, observation, value)
+                        temp_admissible[env_id] = temp_info['admissible_commands'][0]
                         temp_reward[env_id] += prob * scale
                         temp_history[env_id].add("action", resp)
                         temp_history[env_id].add("observation", observation)
@@ -243,11 +244,12 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
                             value_estimate[env_id] = value_estimation(task_class, task_name, receptacle_list,
                                                                       temp_history[env_id]._history) * gamma ** dep
         rew_value = temp_reward + value_estimate
-        argmax = rew_value.index(max(temp_reward))
+        argmax = rew_value.index(max(rew_reward))
         if temp_reward[argmax] > value_estimate[argmax]:
             print("Cumulative reward dominates!")
         else:
             print("Value estimation dominates!")
+        print(value_estimate)
         env_value_estimate = value_estimate[argmax]
         rollout = 1 if replan else (len(temp_history[argmax]._history)-len(env_history._history)) // 2
         for _ in range(rollout):
