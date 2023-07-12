@@ -4,7 +4,7 @@ import os
 import sys
 import json
 import yaml
-#import openai
+import openai
 import importlib
 import alfworld
 import alfworld.agents.environment
@@ -14,104 +14,94 @@ from statistics import mean
 import math
 import copy
 from tenacity import retry, stop_after_attempt, retry_if_exception_type, retry_if_not_exception_type
-import time
-from fairscale.nn.model_parallel.initialize import initialize_model_parallel
-from llama import *
-from pathlib import Path
-import torch
-
-sample_per_node = 6
-depth = 2  # depth - 1, as the first layer is not counted
-scale = 0.1
-replan = False
+import time, random, re
 
 FOLDER = './prompts'
 PROMPT_FILE = 'alfworld_3prompts.json'
 VALUE_PROMPT_FILE = 'alfworld_value.json'
+
 with open(os.path.join(FOLDER, PROMPT_FILE), 'r') as f:
     d = json.load(f)
 
 with open(os.path.join(FOLDER, VALUE_PROMPT_FILE), 'r') as f:
     value_d = json.load(f)
 
-def setup_model_parallel() -> Tuple[int, int]:
-    local_rank = int(os.environ.get("LOCAL_RANK", -1))
-    world_size = int(os.environ.get("WORLD_SIZE", -1))
-
-    torch.distributed.init_process_group("nccl")
-    initialize_model_parallel(world_size)
-    torch.cuda.set_device(local_rank)
-
-    # seed must be the same in all processes
-    torch.manual_seed(1)
-    return local_rank, world_size
-
-def load(ckpt_dir: str, tokenizer_path: str, local_rank: int, world_size: int, max_batch_size: int) -> LLaMA:
-    start_time = time.time()
-    checkpoints = sorted(Path(ckpt_dir).glob("*.pth"))
-    assert (
-            world_size == len(checkpoints)
-    ), f"Loading a checkpoint for MP={len(checkpoints)} but world size is {world_size}"
-    ckpt_path = checkpoints[local_rank]
-    print("Loading")
-    checkpoint = torch.load(ckpt_path, map_location="cpu")
-    with open(Path(ckpt_dir) / "params.json", "r") as f:
-        params = json.loads(f.read())
-
-    model_args: ModelArgs = ModelArgs(max_seq_len=2048, max_batch_size=max_batch_size, **params)
-    tokenizer = Tokenizer(model_path=tokenizer_path)
-    model_args.vocab_size = tokenizer.n_words
-    torch.set_default_tensor_type(torch.cuda.HalfTensor)
-    model = Transformer(model_args).cuda().half()
-    torch.set_default_tensor_type(torch.FloatTensor)
-    model.load_state_dict(checkpoint, strict=False)
-    generator = LLaMA(model, tokenizer)
-    print(f"Loaded in {time.time() - start_time:.2f} seconds")
-    return generator
-
-local_rank, world_size = setup_model_parallel()
-if local_rank > 0:
-    sys.stdout = open(os.devnull, "w")
-generator = load(
-        '../../llama/30B/', '../../llama/30B/tokenizer.model', local_rank, world_size, 1
-    )
-
-#single_res = generator.generate(prompts=['A dog is'], max_gen_len=100, temperature=0.0, top_p=0.9)
-#print(single_res)
-"""
-results = generator.get_ll(
-    prefix="A dog is", prompts=["A dog is an animal.", "A dog is a four-legged animal.", single_res[0]]
-)
-        print(results)
-
 @retry(
     stop=stop_after_attempt(4),
     retry=retry_if_not_exception_type((ValueError, OSError))
     #retry=retry_if_exception_type(openai.error.APIConnectionError),
 )
-def call_openai_api(prompt, stop, n, temperature=2.0):
-    response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=prompt,
-        logprobs=0,
-        temperature=temperature,
-        max_tokens=100,
-        top_p=0.8,
-        n=n,
-        frequency_penalty=0.0,
-        presence_penalty=0.0,
-        stop=stop,
-    )
-  #  time.sleep(0.2)
+def call_openai_api(prompt, stop, n, temperature=0.0, chatcompletion=False):
+    if chatcompletion:
+        response = openai.ChatCompletion.create(
+         #   engine="text-davinci-003",
+            engine='gpt-35-turbo',
+            messages=[
+                {"role": "user", "content": prompt}],
+         #   prompt=prompt,
+         #   logprobs=0,
+            temperature=temperature,
+            max_tokens=100,
+            top_p=0.8,
+         #   n=n,
+         #   frequency_penalty=0.0,
+         #   presence_penalty=0.0,
+            stop=stop,
+        )
+    else:
+        response = openai.Completion.create(
+            engine="text-davinci-003",
+         #   engine='gpt-35-turbo',
+         ##   messages=[
+          #      {"role": "user", "content": prompt}],
+            prompt=prompt,
+            logprobs=0,
+            temperature=temperature,
+            max_tokens=100,
+            top_p=0.8,
+            n=n,
+            frequency_penalty=0.0,
+            presence_penalty=0.0,
+            stop=stop,
+        )
+    time.sleep(0.2)
     return response
 
-def llm(prompt, stop=["\n"], n=8, temperature=2.0):
+def llm(prompt, stop=["\n"], n=1, temperature=0.0, chatcompletion=False):
+    openai.api_key = "jQlEvealzOcL4aXXVzOsm5yOANVn2Jsk"
+    openai.api_type = "azure"
+    openai.api_base = "https://search.bytedance.net/gpt/openapi/online/v2/crawl"
+    openai.api_version = "2023-06-01-preview"
+    response = call_openai_api(prompt, stop, n=n, temperature=temperature, chatcompletion=chatcompletion)
+    if chatcompletion:
+        for tries in range(1, 4):
+            if response == {}:
+                response = call_openai_api(prompt, stop, n=n, temperature=temperature, chatcompletion=chatcompletion)
+         #   elif all(item["text"].strip() == '' for item in response["choices"]):
+            elif all(item["message"]['content'].strip() == '' for item in response["choices"]):
+                    response = call_openai_api(prompt, stop, n=n, temperature=temperature, chatcompletion=chatcompletion)
+            else:
+                break
+        #return response["choices"][0]["text"].strip()
+        return response["choices"][0]["message"]["content"].strip()
+    else:
+        for tries in range(1, 4):
+            if response == {}:
+                response = call_openai_api(prompt, stop, n=n, temperature=temperature, chatcompletion=chatcompletion)
+            elif all(item["text"].strip() == '' for item in response["choices"]):
+                    response = call_openai_api(prompt, stop, n=n, temperature=temperature, chatcompletion=chatcompletion)
+            else:
+                break
+        return response["choices"][0]["text"].strip()
+
+
+def llm_n(prompt, stop=["\n"], n=15, temperature=1.0):
     openai.api_key = "jQlEvealzOcL4aXXVzOsm5yOANVn2Jsk"
     openai.api_type = "azure"
     openai.api_base = "https://search.bytedance.net/gpt/openapi/online/v2/crawl"
     openai.api_version = "2023-06-01-preview"
     response = call_openai_api(prompt, stop, n=n, temperature=temperature)
-    for tries in range(1, 10):
+    for tries in range(1, 4):
         if response == {}:
             response = call_openai_api(prompt, stop, n=n, temperature=temperature)
         elif all(item["text"].strip() == '' for item in response["choices"]):
@@ -128,153 +118,165 @@ def llm(prompt, stop=["\n"], n=8, temperature=2.0):
             pass
     if n > 1:
         response_list = sorted(response_list, key=lambda x: x[1], reverse=True)
-    try:
-        return response_list[0], response_list
-    except Exception as e:
-        return ('skip', 0.0), response_list
+    return response_list
 
-"""
 def process_ob(ob):
     if ob.startswith('You arrive at loc '):
         ob = ob[ob.find('. ')+2:]
     return ob
 
-def alfworld_run(env, base_prompt, value_prompt, memory: List[str], to_print=True, ob='', temp_envs=None, temp_envs_before_init=None, temp_admissible=None, num_reset=None) -> Tuple[EnvironmentHistory, bool]:
+
+def object_control(receptacle_list, history):
+    no_receptacle = True
+    step_idx = 1
+    while no_receptacle:
+        receptacle = [loc for loc in receptacle_list if
+                      (loc in history[-step_idx]['value'])]
+        step_idx += 1
+        no_receptacle = not receptacle
+    receptacle = receptacle[-1]
+    objects = re.findall(r'(\b\w+\b)\s+(\d+)', history[-1]['value'].replace(receptacle, ''))
+    object_list = [' '.join(object) for object in objects]
+    # temp_admaction[parent_effective_start_idx].append(f'open {receptacle}')
+
+    hold_history = [obj['value'].replace('You pick up the', '').split('from')[0].strip()
+                    for obj in history if obj['value'].startswith('You pick up the')]
+    put_history = [obj['value'].replace('You put the', '').split('in/on')[0].strip()
+                   for obj in history if obj['value'].startswith('You put the')]
+    hold_object = hold_history[-1] if len(hold_history) > len(put_history) else None
+    return hold_object, receptacle, object_list
+
+
+def admissible_action(receptacle_list, history, temp_admaction):
+    hold_object, receptacle, object_list = object_control(receptacle_list, history)
+    temp_admaction.append(f'open {receptacle}')
+    for obj in object_list:
+        if obj.startswith('desklamp'):
+            temp_admaction.append(f'use {obj}')
+        elif not hold_object:
+            temp_admaction.append(f'take {obj} from {receptacle}')
+    if hold_object:
+        temp_admaction.append(f'put {hold_object} in/on {receptacle}')
+        if receptacle.startswith('fridge'):
+            temp_admaction.append(f'cool {hold_object} with {receptacle}')
+        if receptacle.startswith('microwave'):
+            temp_admaction.append(f'heat {hold_object} with {receptacle}')
+        if receptacle.startswith('sinkbasin'):
+            temp_admaction.append(f'clean {hold_object} with {receptacle}')
+    return temp_admaction
+
+
+def value_estimation(task_class, task_name, receptacle_list, history):
+    hold_object, _, _ = object_control(receptacle_list, history)
+    target_obj, target_receptacle = task_name.split('-')[1].lower(), task_name.split('-')[3].lower()
+    hold_complete = hold_object is not None and (target_obj in hold_object)
+    put_target = [obj['value'].startswith(f'You put the {target_obj}') and
+                  obj['value'].split('the')[2].strip().startswith(f'{target_receptacle}') for obj in history]
+                 # obj['value'].split('in/on the ')[1].startswith(f'{target_receptacle}') for obj in history]
+    put_complete = any(put_target)
+    if task_class == 'put':
+        value = 1 if put_complete else 1 / 2 if hold_complete else 0
+    elif task_class == 'clean':
+        operate_complete = any(obj['value'].startswith(f'You clean the {target_obj}') for obj in history)
+        value = 1 if (operate_complete and put_complete) else 2 / 3 if operate_complete else 1 / 3 if hold_complete else 0
+     #   clean_history = [obj['value'].replace('You clean the', '').split('using')[0].strip()
+      #            for obj in history if obj['value'].startswith('You clean the')]
+     #   operate_object = (target_obj in clean_history)
+    elif task_class == 'heat':
+        operate_complete = any([obj['value'].startswith(f'You heat the {target_obj}') for obj in history])
+        value = 1 if (operate_complete and put_complete) else 2 / 3 if operate_complete else 1 / 3 if hold_complete else 0
+    elif task_class == 'cool':
+        operate_complete = any([obj['value'].startswith(f'You cool the {target_obj}') for obj in history])
+        value = 1 if (operate_complete and put_complete) else 2 / 3 if operate_complete else 1 / 3 if hold_complete else 0
+    elif task_class == 'examine':
+        operate_complete = any([obj['value'].startswith('You turn on the desklamp') for obj in history])
+        value = (hold_complete + (hold_complete and operate_complete)) / 2
+    elif task_class == 'puttwo':
+        put_count = sum(put_target)
+        value = 1 / 4 if (put_count == 0 and hold_complete) else 2 / 4 if (put_count == 1 and not hold_complete) \
+            else 3 / 4 if (put_count == 1 and hold_complete) else 1 if (put_count == 2) else 0
+    return value
+
+
+sample_per_node = 3
+depth = 2  # depth - 1, as the first layer is not counted
+replan = True
+def alfworld_run(env, base_prompt, value_prompt, memory: List[str], to_print=True, ob='', init_admaction=None, task=None, z=0) -> Tuple[EnvironmentHistory, bool]:
     if len(memory) > 3:
         env_history = EnvironmentHistory(base_prompt, ob, memory[-3:], [])
-        env_value_history = EnvironmentHistory(value_prompt, ob, memory[-3:], [])
     else:
         env_history = EnvironmentHistory(base_prompt, ob, memory, [])
-        env_value_history = EnvironmentHistory(value_prompt, ob, memory, [])
-
+    receptacle_list = [init_a.replace('go to ', '') for init_a in init_admaction]
     env_history.reset()
-    env_value_history.reset()
     if to_print:
         print(ob)
         sys.stdout.flush()
     cur_step = 0
     env_value_estimate = 0.0
-    think_action = False
-    while cur_step < 50:
+    gamma = 0.9
+    task_name, task_class = task
+    while cur_step < 40:
+        if z < 16:
+            break
         temp_history = [copy.deepcopy(env_history) for _ in range(sample_per_node ** depth)]
-        temp_value_history = [copy.deepcopy(env_value_history) for _ in range(sample_per_node ** depth)]
-        temp_reward = [0.0 for _ in range(sample_per_node ** depth)]
         value_estimate = [env_value_estimate for _ in range(sample_per_node ** depth)]
+        temp_admaction = [copy.deepcopy(init_admaction) for _ in range(sample_per_node ** depth)]
         for dep in range(depth):
             layer_samples = sample_per_node ** dep
             for parent_idx in range(layer_samples):
                 parent_effective_start_idx = sample_per_node ** (depth - dep) * parent_idx
-                all_prompts = [str(temp_history[parent_effective_start_idx]) + "\n>" + tt for tt in temp_admissible[parent_effective_start_idx]]
-                response_list = []
-                for action_idx, action_prompt in enumerate(all_prompts):
-                    action_prob = generator.get_ll(prefix=str(temp_history[parent_effective_start_idx]) + "\n>",
-                                                    prompts=[action_prompt])
-                    response_list.append((temp_admissible[parent_effective_start_idx][action_idx], action_prob[0]))
-#                all_probs = generator.get_ll(prefix=str(temp_history[parent_effective_start_idx]) + "\n>", prompts=all_prompts)
-#                for key, val in zip(all_prompts, all_probs):
-#                    response_list.append((key, val))
-                response_list = sorted(response_list, key=lambda x: x[1], reverse=True)
-                print("parent_idx", parent_idx, response_list)
-                value_response = generator.generate(prompts=[str(temp_value_history[parent_effective_start_idx]) + "\n>"],
-                                                     max_gen_len=100, temperature=0.0, top_p=0.9)
-                value_response = value_response[0].replace(str(temp_value_history[parent_effective_start_idx]) + "\n>", "")
-                value_response = value_response.split('>')[0].split('\n')[0].strip()
-            #    (value_response, _), _ = llm(str(temp_value_history[parent_effective_start_idx]) + "\n>", stop=['\n'], n=1, temperature=0.0)
-                for i, (res, probability) in enumerate(response_list[:sample_per_node]):
+                if cur_step != 0 or dep != 0:
+                    temp_admaction[parent_effective_start_idx] = admissible_action(receptacle_list,
+                                                                                   temp_history[parent_effective_start_idx]._history,
+                                                                                   temp_admaction[parent_effective_start_idx])
+                    value = value_estimation(task_class, task_name, receptacle_list,
+                                             temp_history[parent_effective_start_idx]._history)
+                else:
+                    value = env_value_estimate
+
+                random.shuffle(temp_admaction[parent_effective_start_idx])
+                #for i, admissable_action in enumerate(temp_admaction[parent_effective_start_idx][:sample_per_node]):
+
+                response_list = llm_n(str(temp_history[parent_effective_start_idx]) + "\n>", stop=['\n'])
+                response_list = list(dict(response_list).items())
+                response_list = [key for key, res in response_list if key in temp_admaction[parent_effective_start_idx]]
+             #   response_list = response_list[:sample_per_node] + [response_list[0]] * (sample_per_node - len(response_list))
+                response_list = response_list + temp_admaction[parent_effective_start_idx][:sample_per_node - len(response_list)]
+                for i, admissable_action in enumerate(response_list[:sample_per_node]):
                     effect_start_idx = parent_effective_start_idx + sample_per_node ** (depth - dep - 1) * i
                     effect_end_idx = parent_effective_start_idx + sample_per_node ** (depth - dep - 1) * (i + 1)
+                    temp_history[effect_start_idx].add("action", admissable_action)
+                    observation = llm(str(temp_history[effect_start_idx]) + "\n", stop=['\n'], chatcompletion=False)  # predictive model
+                    if observation == '':
+                        observation = 'Nothing happens.'
                     for env_id in range(effect_start_idx, effect_end_idx):
-                        if res.startswith('think:'):
-                            think_action = True
-                        resp = res
-                        prob = probability
-                        while think_action:
-                            resp, prob = generate_with_prob(prompts=[str(temp_history[env_id]) + "\n>"], max_gen_len=100, temperature=0.0, top_p=0.9)
-                            resp = resp[0].replace(str(temp_history[env_id]) + "\n>", "")
-                            print("resp", resp, "prob", prob)
-                            prob = prob[0]
-                       #     (resp, prob), _ = llm(str(temp_history[env_id]) + "\n>", stop=['\n'])
-                            if not resp.startswith('think:'):
-                                think_action = False
-                            else:
-                                observation = 'OK.'
-                                temp_history[env_id].add("action", resp)
-                                temp_history[env_id].add("observation", observation)
-                        observation, _, _, temp_info = temp_envs[env_id].step([resp])
-                        temp_admissible[env_id] = temp_info['admissible_commands'][0]
-                        observation = process_ob(observation[0])
-                        if value_response.startswith('critic:'):
-                            temp_value_history[env_id].add("critic", value_response)
-                            str_value = value_response.partition('=')[-1]
-                            if str_value.endswith('.'):
-                                value_estimate[env_id] = float(str_value[:-1])
-                            elif str_value != '':
-                                value_estimate[env_id] = float(str_value)
-                        temp_reward[env_id] += prob * scale
-                        temp_history[env_id].add("action", resp)
+                        if env_id != effect_start_idx:
+                            temp_history[env_id].add("action", admissable_action)
                         temp_history[env_id].add("observation", observation)
-                        temp_value_history[env_id].add("action", "OK.")
-                        temp_value_history[env_id].add("observation", observation)
+                        value_estimate[env_id] = value * gamma ** dep
+                        print("predicted tras:", admissable_action, observation, value)
                         if dep == depth - 1:  # terminal value
-                            value_response = generator.generate(
-                                prompts=[str(temp_value_history[env_id]) + "\n>"],
-                                max_gen_len=100, temperature=0.0, top_p=0.9)
-                            print(value_response)
-                            value_response = value_response[0].replace(str(temp_value_history[env_id]) + "\n>", "")
-                            value_response = value_response.split('>')[0].split('\n')[0].strip()
-                            print(value_response)
-                            #   (value_response, _), _ = llm(str(temp_value_history[env_id]) + "\n>", stop=['\n'], n=1, temperature=0.0)
-                            if value_response.startswith('critic:'):
-                                temp_value_history[env_id].add("critic", value_response)
-                                str_value = value_response.partition('=')[-1]
-                                if str_value.endswith('.'):
-                                    value_estimate[env_id] = float(str_value[:-1])
-                                elif str_value != '':
-                                    value_estimate[env_id] = float(str_value)
-        rew_value = temp_reward + value_estimate
-        argmax = rew_value.index(max(temp_reward))
-        if temp_reward[argmax] > value_estimate[argmax]:
-            print("Cumulative reward dominates!")
-        else:
-            print("Value estimation dominates!")
-        env_value_estimate = value_estimate[argmax]
+                            value_estimate[env_id] = value_estimation(task_class, task_name, receptacle_list,
+                                                                      temp_history[env_id]._history) * gamma ** dep
+        argmax = value_estimate.index(max(value_estimate))
+      #  env_value_estimate = value_estimate[argmax]
+        print(value_estimate)
         rollout = 1 if replan else (len(temp_history[argmax]._history)-len(env_history._history)) // 2
         for _ in range(rollout):
-            if len(temp_history[argmax]._history) > len(env_history._history):
-                action = temp_history[argmax]._history[len(env_history._history)]['value']
-            else:
-                action = 'skip'
-            env_history.add("action", action)
-            if len(temp_value_history[argmax]._history) > len(env_value_history._history):
-                value_response = temp_value_history[argmax]._history[len(env_value_history._history)]['value']
-                if value_response.startswith('critic'):
-                    env_value_history.add("critic", value_response)
-                    print(value_response)
+            action = temp_history[argmax]._history[len(env_history._history)]['value']
             observation, reward, done, info = env.step([action])
             observation, reward, done = process_ob(observation[0]), info['won'][0], done[0]
-            if action.startswith('think:'):
-                observation = 'OK.'
-            else:
-                env_value_history.add("action", 'OK.')
-                env_value_history.add("observation", observation)
-
+            env_history.add("action", action)
             env_history.add("observation", observation)
+            env_value_estimate = value_estimation(task_class, task_name, receptacle_list, env_history._history)
             if to_print:
                 print(f'{cur_step}> {action}\n{observation}')
                 sys.stdout.flush()
-            if done:
+            if reward:
                 return env_history, True
-            elif env_history.check_is_exhausted():
-                return env_history, False
+        #    elif env_history.check_is_exhausted():
+        #        return env_history, False
             cur_step += 1
-        for ii, tem_e in enumerate(temp_envs):
-            tem_e = temp_envs_before_init[ii].init_env(batch_size=1)
-            for _ in range(num_reset + 1):  # the first num_reset makes tem_e at the same environment as env
-                _, _ = tem_e.reset()
-            for prev_step in env_history._history:
-                if prev_step['label'] == "action" and not prev_step["value"].startswith('think:'):
-                    _, _, _, _ = tem_e.step([prev_step["value"]])
-            temp_envs[ii] = tem_e
     return env_history, False
 
 PREFIXES = {
@@ -303,7 +305,6 @@ def run_trial(
     env = getattr(alfworld.agents.environment, config["env"]["type"])(config, train_eval=split)
     temp_envs_before_init = [copy.deepcopy(env) for _ in range(sample_per_node ** depth)]
     env = env.init_env(batch_size=1)
-    temp_envs = [tem.init_env(batch_size=1) for tem in temp_envs_before_init]
 
     num_successes: int = 0
     num_additional_successes: int = 0
@@ -312,10 +313,7 @@ def run_trial(
     for z, env_config in enumerate(env_configs):
         print(f'{z} / {len(env_configs)}')
         ob, info = env.reset()
-        admissiable_actions = info['admissible_commands'][0]
-        temp_admissible = [admissiable_actions for _ in range(sample_per_node ** depth)]
-        for tem_e in temp_envs:
-            tem_ob, tem_info = tem_e.reset()
+        init_admaction = info['admissible_commands'][0][:-2]
 
         ob = '\n'.join(ob[0].split('\n\n')[1:])
         name = '/'.join(info['extra.gamefile'][0].split('/')[-3:-1])
@@ -334,12 +332,10 @@ def run_trial(
 
         for i, (k, v) in enumerate(PREFIXES.items()):
             if name.startswith(k):
-                base_prompt = 'Interact with a household to solve a task. Here are two examples.\n' + d[f'react_{v}_1'] + d[f'react_{v}_0']
+                base_prompt = 'Interact with a household to solve a task. Here are two examples.\n' + d[f'act_{v}_1'] + d[f'act_{v}_0']
                 value_prompt = 'You are a value critic of states in a household task. Here are two examples.\n' + value_d[f'value_{v}_1'] + value_d[f'value_{v}_0']
                 final_env_history, is_success = alfworld_run(env, base_prompt, value_prompt, env_config["memory"] if use_memory else [],
-                                                             to_print=True, ob=ob, temp_envs=temp_envs,
-                                                             temp_envs_before_init=temp_envs_before_init,
-                                                             temp_admissible=temp_admissible, num_reset=z)
+                                                             to_print=True, ob=ob, init_admaction=init_admaction, task=(name, v), z=z)
 
                 # update env config
                 if is_success:
@@ -360,8 +356,6 @@ def run_trial(
 
     # close environment object
     env.close()
-    for tem_e in temp_envs:
-        tem_e.close()
 
     # log trial results to trial and world logs
     log_str: str = f"""
