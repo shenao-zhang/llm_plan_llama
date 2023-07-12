@@ -236,15 +236,19 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
                         observation, _, _, temp_info = temp_envs[env_id].step([resp])
                         observation = process_ob(observation[0])
                         print("plantraj:", resp, observation, value)
-                        temp_admissible[env_id] = temp_info['admissible_commands'][0]
+                        admactions = temp_info['admissible_commands'][0].remove('inventory')
+                        admactions = admactions.remove('look')
+                        admactions = [s for s in admactions if s.startswith('examine') ]
+                        temp_admissible[env_id] = admactions
                         temp_reward[env_id] += prob * scale
                         temp_history[env_id].add("action", resp)
                         temp_history[env_id].add("observation", observation)
                         if dep == depth - 1:  # terminal value
                             value_estimate[env_id] = value_estimation(task_class, task_name, receptacle_list,
                                                                       temp_history[env_id]._history) * gamma ** dep
-        rew_value = temp_reward + value_estimate
-        argmax = rew_value.index(max(rew_reward))
+   #     rew_value = temp_reward + value_estimate
+        rew_value = [sum(x) for x in zip(temp_reward, value_estimate)]
+        argmax = rew_value.index(max(rew_value))
         if temp_reward[argmax] > value_estimate[argmax]:
             print("Cumulative reward dominates!")
         else:
