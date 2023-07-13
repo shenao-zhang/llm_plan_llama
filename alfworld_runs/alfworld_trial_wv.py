@@ -19,10 +19,11 @@ from fairscale.nn.model_parallel.initialize import initialize_model_parallel
 from llama import *
 from pathlib import Path
 import torch, re
+import torch.distributed as dist
 
-sample_per_node = 4
+sample_per_node = 8
 depth = 2  # depth - 1, as the first layer is not counted
-scale = 0.15
+scale = 0.1
 replan = False
 
 FOLDER = './prompts'
@@ -174,11 +175,13 @@ def value_estimation(task_class, task_name, receptacle_list, history):
       #            for obj in history if obj['value'].startswith('You clean the')]
      #   operate_object = (target_obj in clean_history)
     elif task_class == 'heat':
+        operate_counteract = any([obj['value'].startswith(f'You cool the {target_obj}') for obj in history])
         operate_complete = any([obj['value'].startswith(f'You heat the {target_obj}') for obj in history])
-        value = 1 if (operate_complete and put_complete) else 2 / 3 if operate_complete else 1 / 3 if hold_complete else 0
+        value = 1 if (operate_complete and put_complete and not operate_counteract) else 2 / 3 if (operate_complete and not operate_counteract) else 1 / 3 if hold_complete else 0
     elif task_class == 'cool':
+        operate_counteract = any([obj['value'].startswith(f'You heat the {target_obj}') for obj in history])
         operate_complete = any([obj['value'].startswith(f'You cool the {target_obj}') for obj in history])
-        value = 1 if (operate_complete and put_complete) else 2 / 3 if operate_complete else 1 / 3 if hold_complete else 0
+        value = 1 if (operate_complete and put_complete and not operate_counteract) else 2 / 3 if (operate_complete and not operate_counteract) else 1 / 3 if hold_complete else 0
     elif task_class == 'examine':
         operate_complete = any([obj['value'].startswith('You turn on the desklamp') for obj in history])
         value = (hold_complete + (hold_complete and operate_complete)) / 2
@@ -204,7 +207,9 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
     gamma = 0.9
     task_name, task_class = task
     temp_admissible = [init_admaction for _ in range(sample_per_node ** depth)]
-    while cur_step < 50:
+    while cur_step < 30:
+        if num_reset<2:
+            break
         temp_history = [copy.deepcopy(env_history) for _ in range(sample_per_node ** depth)]
         temp_reward = [0.0 for _ in range(sample_per_node ** depth)]
         value_estimate = [env_value_estimate for _ in range(sample_per_node ** depth)]
@@ -236,9 +241,10 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
                         observation, _, _, temp_info = temp_envs[env_id].step([resp])
                         observation = process_ob(observation[0])
                         print("plantraj:", resp, observation, value)
-                        admactions = temp_info['admissible_commands'][0].remove('inventory')
-                        admactions = admactions.remove('look')
-                        admactions = [s for s in admactions if s.startswith('examine') ]
+                        admactions = temp_info['admissible_commands'][0]
+                        admactions.remove('inventory')
+                        admactions.remove('look')
+                        admactions = [s for s in admactions if not s.startswith('examine') ]
                         temp_admissible[env_id] = admactions
                         temp_reward[env_id] += prob * scale
                         temp_history[env_id].add("action", resp)
@@ -357,14 +363,16 @@ def run_trial(
                     num_additional_successes += 1
                 else:
                     status_str: str = f'Environment #{z} Trial #{trial_idx}: FAIL'
+                rank = dist.get_rank()
 
-                # log to world log
-                with open(world_log_path, 'a') as f:
-                    f.write(status_str + '\n')
+                if rank == 0:
+                    # log to world log
+                    with open(world_log_path, 'a') as f:
+                        f.write(status_str + '\n')
 
-                # log env results to trial log
-                with open(trial_log_path, 'a') as wf:
-                    wf.write(f'\n#####\n\nEnvironment #{z}:\n{str(final_env_history)}\n\nSTATUS: {"OK" if is_success else "FAIL"}\n\n#####\n')
+                    # log env results to trial log
+                    with open(trial_log_path, 'a') as wf:
+                        wf.write(f'\n#####\n\nEnvironment #{z}:\n{str(final_env_history)}\n\nSTATUS: {"OK" if is_success else "FAIL"}\n\n#####\n')
 
     # close environment object
     env.close()

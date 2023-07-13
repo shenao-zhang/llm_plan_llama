@@ -14,7 +14,7 @@ Setting OMP_NUM_THREADS environment variable for each process to be 1 in default
 > initializing ddp with size 1
 > initializing pipeline with size 1
 Loading
-Loaded in 9.90 seconds
+Loaded in 92.06 seconds
 
     -----
     Starting run with the following parameters:
@@ -34,64 +34,284 @@ Evaluating with 134 games
 using look_at_obj_in_light-Bowl-None-DeskLamp-308/trial_T20190907_133919_856963
 You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.
 Your task is to: look at bowl under the desklamp.
-Cumulative reward dominates!
-critic: My task requires four sub-goals in order: find a bowl, take the bowl, find a desklamp, and use the desklamp. My current state satisfies zero of the four sub-goals. The value is 0/4=0.
-0> go to desk 2
-On the desk 2, you see a alarmclock 1, a bowl 1, and a cd 3.
-1> think: Now I find a bowl (1). Next, I need to take it.
-OK.
-2> take bowl 1 from desk 2
-You pick up the bowl 1 from the desk 2.
-Cumulative reward dominates!
-critic: Now I find a bowl (1). My current state satisfies the first of the four sub-goals: find a bowl. The value is 1/4=0.25.
-3> think: Now I take a bowl (1). Next, I need to find a desklamp. A desklamp is more likely to appear in desk (1-2), drawer (1-6), shelf (1-6), laundryhamper (1), garbagecan (1), safe (1). I can check one by one without repetition.
-OK.
-4> go to laundryhamper 1
-On the laundryhamper 1, you see nothing.
-5> go to garbagecan 1
-On the garbagecan 1, you see a cd 1.
-Value estimation dominates!
-6> go to desk 1
-On the desk 1, you see a desklamp 1, a keychain 3, a mug 2, a pen 2, a pen 1, and a pencil 2.
-critic: Now I find a desklamp (1). My current state satisfies the first two of the four sub-goals: find a bowl and find a desklamp. The value is 2/4=0.5.
-7> think: Now I find a desklamp (1). Next, I need to use it.
-OK.
-8> use desklamp 1
-You turn on the desklamp 1.
 1 / 134
 using pick_two_obj_and_place-SoapBar-None-GarbageCan-424/trial_T20190909_064221_368939
 You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
 Your task is to: put two soapbar in garbagecan.
-Cumulative reward dominates!
-critic: My current state satisfies the first sub-goal: put two soapbar in garbagecan. The value is 1/1.
-0> go to handtowelholder 2
-On the handtowelholder 2, you see a handtowel 1.
-critic: My current state satisfies the second sub-goal: put two handtowel in handtowelholder. The value is 2/1.
-1> take handtowel 1 from handtowelholder 2
-You pick up the handtowel 1 from the handtowelholder 2.
-Cumulative reward dominates!
-critic: My current state satisfies the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub-goal: put the first sub
-2> go to sinkbasin 1
-On the sinkbasin 1, you see nothing.
-3> put handtowel 1 in/on sinkbasin 1
-You put the handtowel 1 in/on the sinkbasin 1.
-Cumulative reward dominates!
-4> put handtowel 1 in/on handtowelholder 1
-Nothing happens.
-5> take handtowel 1 from sinkbasin 1
-You pick up the handtowel 1 from the sinkbasin 1.
-Cumulative reward dominates!
-6> put handtowel 1 in/on sinkbasin 1
-You put the handtowel 1 in/on the sinkbasin 1.
-7> take handtowel 1 from sinkbasin 1
-You pick up the handtowel 1 from the sinkbasin 1.
-Cumulative reward dominates!
-8> put handtowel 1 in/on sinkbasin 1
-You put the handtowel 1 in/on the sinkbasin 1.
-9> take handtowel 1 from sinkbasin 1
-You pick up the handtowel 1 from the sinkbasin 1.
+2 / 134
+using pick_cool_then_place_in_recep-Tomato-None-Microwave-10/trial_T20190909_102710_795182
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a cool tomato in microwave.
+plantraj: go to microwave 1 The microwave 1 is closed. 0.0
+plantraj: go to microwave 1 The microwave 1 is closed. 0.0
+plantraj: go to microwave 1 The microwave 1 is closed. 0.0
+plantraj: go to microwave 1 The microwave 1 is closed. 0.0
+plantraj: go to microwave 1 The microwave 1 is closed. 0.0
+plantraj: go to microwave 1 The microwave 1 is closed. 0.0
+plantraj: go to microwave 1 The microwave 1 is closed. 0.0
+plantraj: go to microwave 1 The microwave 1 is closed. 0.0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0.0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0.0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0.0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0.0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0.0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0.0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0.0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0.0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.0
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.0
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.0
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.0
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.0
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.0
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.0
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.0
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.0
+plantraj: go to fridge 1 The fridge 1 is closed. 0.0
+plantraj: go to fridge 1 The fridge 1 is closed. 0.0
+plantraj: go to fridge 1 The fridge 1 is closed. 0.0
+plantraj: go to fridge 1 The fridge 1 is closed. 0.0
+plantraj: go to fridge 1 The fridge 1 is closed. 0.0
+plantraj: go to fridge 1 The fridge 1 is closed. 0.0
+plantraj: go to fridge 1 The fridge 1 is closed. 0.0
+plantraj: go to fridge 1 The fridge 1 is closed. 0.0
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0.0
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0.0
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0.0
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0.0
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0.0
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0.0
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0.0
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0.0
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.0
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.0
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.0
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.0
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.0
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.0
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.0
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.0
+plantraj: open microwave 1 You open the microwave 1. The microwave 1 is open. In it, you see nothing. 0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0
+plantraj: go to coffeemachine 1 On the coffeemachine 1, you see nothing. 0
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0
+plantraj: go to stoveburner 4 On the stoveburner 4, you see nothing. 0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0
+plantraj: take tomato 1 from countertop 1 You pick up the tomato 1 from the countertop 1. 0
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0
+plantraj: take peppershaker 2 from countertop 1 You pick up the peppershaker 2 from the countertop 1. 0
+plantraj: go to microwave 1 The microwave 1 is closed. 0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0
+plantraj: take pot 1 from stoveburner 1 You pick up the pot 1 from the stoveburner 1. 0
+plantraj: go to microwave 1 The microwave 1 is closed. 0
+plantraj: go to stoveburner 4 On the stoveburner 4, you see nothing. 0
+plantraj: go to coffeemachine 1 On the coffeemachine 1, you see nothing. 0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0
+plantraj: take pot 1 from stoveburner 3 You pick up the pot 1 from the stoveburner 3. 0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0
+plantraj: take statue 1 from shelf 1 You pick up the statue 1 from the shelf 1. 0
+plantraj: go to shelf 2 On the shelf 2, you see a creditcard 2. 0
+plantraj: go to microwave 1 The microwave 1 is closed. 0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0
+plantraj: take tomato 3 from sinkbasin 1 You pick up the tomato 3 from the sinkbasin 1. 0
+plantraj: take spatula 2 from sinkbasin 1 You pick up the spatula 2 from the sinkbasin 1. 0
+plantraj: take potato 1 from sinkbasin 1 You pick up the potato 1 from the sinkbasin 1. 0
+plantraj: take egg 3 from sinkbasin 1 You pick up the egg 3 from the sinkbasin 1. 0
+plantraj: go to microwave 1 The microwave 1 is closed. 0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0
+plantraj: open fridge 1 You open the fridge 1. The fridge 1 is open. In it, you see a apple 1, a bowl 3, a bowl 2, a cup 1, a mug 1, and a pan 1. 0
+plantraj: go to microwave 1 The microwave 1 is closed. 0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0
+plantraj: go to coffeemachine 1 On the coffeemachine 1, you see nothing. 0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0
+plantraj: go to stoveburner 4 On the stoveburner 4, you see nothing. 0
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0
+plantraj: go to microwave 1 The microwave 1 is closed. 0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0
+plantraj: take lettuce 1 from countertop 3 You pick up the lettuce 1 from the countertop 3. 0
+plantraj: take butterknife 2 from countertop 3 You pick up the butterknife 2 from the countertop 3. 0
+plantraj: take butterknife 3 from countertop 3 You pick up the butterknife 3 from the countertop 3. 0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0
+plantraj: take lettuce 2 from countertop 3 You pick up the lettuce 2 from the countertop 3. 0
+plantraj: go to microwave 1 The microwave 1 is closed. 0
+plantraj: go to countertop 1 On the countertop 1, you see a peppershaker 2, and a tomato 1. 0
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0
+plantraj: take butterknife 1 from countertop 2 You pick up the butterknife 1 from the countertop 2. 0
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0
+plantraj: take papertowelroll 1 from countertop 2 You pick up the papertowelroll 1 from the countertop 2. 0
+plantraj: take knife 1 from countertop 2 You pick up the knife 1 from the countertop 2. 0
+Value estimation dominates!
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+0> go to countertop 1
+On the countertop 1, you see a peppershaker 2, and a tomato 1.
+1> take tomato 1 from countertop 1
+You pick up the tomato 1 from the countertop 1.
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to coffeemachine 1 Nothing happens. 0.3333333333333333
+plantraj: go to coffeemachine 1 Nothing happens. 0.3333333333333333
+plantraj: go to coffeemachine 1 Nothing happens. 0.3333333333333333
+plantraj: go to coffeemachine 1 Nothing happens. 0.3333333333333333
+plantraj: go to coffeemachine 1 Nothing happens. 0.3333333333333333
+plantraj: go to coffeemachine 1 Nothing happens. 0.3333333333333333
+plantraj: go to coffeemachine 1 Nothing happens. 0.3333333333333333
+plantraj: go to coffeemachine 1 Nothing happens. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to microwave 1 The microwave 1 is closed. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to stoveburner 4 On the stoveburner 4, you see nothing. 0.3333333333333333
+plantraj: go to coffeemachine 1 On the coffeemachine 1, you see nothing. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to countertop 3 On the countertop 3, you see a bread 2, a butterknife 3, a butterknife 2, a houseplant 1, a knife 2, a lettuce 2, a lettuce 1, and a saltshaker 2. 0.3333333333333333
+plantraj: put tomato 1 in/on countertop 2 You put the tomato 1 in/on the countertop 2. 0.3333333333333333
+plantraj: go to microwave 1 The microwave 1 is closed. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to coffeemachine 1 On the coffeemachine 1, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: put tomato 1 in/on sinkbasin 1 You put the tomato 1 in/on the sinkbasin 1. 0.3333333333333333
+plantraj: go to microwave 1 The microwave 1 is closed. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: clean tomato 1 with sinkbasin 1 You clean the tomato 1 using the sinkbasin 1. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 4 On the stoveburner 4, you see nothing. 0.3333333333333333
+plantraj: go to coffeemachine 1 On the coffeemachine 1, you see nothing. 0.3333333333333333
+plantraj: cool tomato 1 with fridge 1 You cool the tomato 1 using the fridge 1. 0.3333333333333333
+plantraj: go to microwave 1 The microwave 1 is closed. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to coffeemachine 1 On the coffeemachine 1, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 4 On the stoveburner 4, you see nothing. 0.3333333333333333
+plantraj: go to microwave 1 The microwave 1 is closed. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: put tomato 1 in/on countertop 1 You put the tomato 1 in/on the countertop 1. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to microwave 1 The microwave 1 is closed. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to coffeemachine 1 On the coffeemachine 1, you see nothing. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to stoveburner 4 On the stoveburner 4, you see nothing. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to microwave 1 The microwave 1 is closed. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to coffeemachine 1 On the coffeemachine 1, you see nothing. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to countertop 2 On the countertop 2, you see a bread 1, a butterknife 1, a cup 2, a fork 2, a knife 1, a papertowelroll 1, a plate 2, a spoon 1, and a vase 1. 0.3333333333333333
+plantraj: go to shelf 1 On the shelf 1, you see a statue 1. 0.3333333333333333
+plantraj: go to microwave 1 The microwave 1 is closed. 0.3333333333333333
+plantraj: go to stoveburner 1 On the stoveburner 1, you see a pot 1. 0.3333333333333333
+plantraj: go to shelf 2 On the shelf 2, you see a creditcard 2. 0.3333333333333333
+plantraj: go to stoveburner 2 On the stoveburner 2, you see nothing. 0.3333333333333333
+plantraj: go to fridge 1 The fridge 1 is closed. 0.3333333333333333
+plantraj: go to sinkbasin 1 On the sinkbasin 1, you see a egg 3, a potato 1, a spatula 2, and a tomato 3. 0.3333333333333333
+plantraj: go to stoveburner 3 On the stoveburner 3, you see a pot 1. 0.3333333333333333
+plantraj: go to shelf 3 On the shelf 3, you see nothing. 0.3333333333333333
+Value estimation dominates!
+[0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.0, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.0, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.6, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.0, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3]
+2> go to fridge 1
+The fridge 1 is closed.
+3> cool tomato 1 with fridge 1
+You cool the tomato 1 using the fridge 1.
 WARNING:torch.distributed.elastic.agent.server.api:Received 1 death signal, shutting down workers
-WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2521 closing signal SIGHUP
-WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2522 closing signal SIGHUP
-WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2523 closing signal SIGHUP
-WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2524 closing signal SIGHUP
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 124 closing signal SIGHUP
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 125 closing signal SIGHUP
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 126 closing signal SIGHUP
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 127 closing signal SIGHUP
