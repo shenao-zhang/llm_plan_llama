@@ -206,11 +206,11 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
     env_value_estimate = 0.0
     gamma = 0.9
     task_name, task_class = task
-    temp_admissible = [init_admaction for _ in range(sample_per_node ** depth)]
-    while cur_step < 30:
+    while cur_step < 35:
         if num_reset<2:
             break
         temp_history = [copy.deepcopy(env_history) for _ in range(sample_per_node ** depth)]
+        temp_admissible = [init_admaction for _ in range(sample_per_node ** depth)]
         temp_reward = [0.0 for _ in range(sample_per_node ** depth)]
         value_estimate = [env_value_estimate for _ in range(sample_per_node ** depth)]
         for dep in range(depth):
@@ -280,6 +280,7 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
 #            elif env_history.check_is_exhausted():
 #                return env_history, False
             cur_step += 1
+        init_admaction = info['admissible_commands'][0]
         for ii, tem_e in enumerate(temp_envs):
             tem_e = temp_envs_before_init[ii].init_env(batch_size=1)
             for _ in range(num_reset + 1):  # the first num_reset makes tem_e at the same environment as env
