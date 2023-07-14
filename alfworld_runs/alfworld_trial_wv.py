@@ -207,7 +207,7 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
     gamma = 0.9
     task_name, task_class = task
     while cur_step < 35:
-        if num_reset<2:
+        if num_reset<7:
             break
         temp_history = [copy.deepcopy(env_history) for _ in range(sample_per_node ** depth)]
         temp_admissible = [init_admaction for _ in range(sample_per_node ** depth)]
@@ -242,8 +242,8 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
                         observation = process_ob(observation[0])
                         print("plantraj:", resp, observation, value)
                         admactions = temp_info['admissible_commands'][0]
-                        admactions.remove('inventory')
-                        admactions.remove('look')
+                        admactions.remove('inventory') if 'inventory' in admactions else None 
+                        admactions.remove('look') if 'look' in admactions else None
                         admactions = [s for s in admactions if not s.startswith('examine') ]
                         temp_admissible[env_id] = admactions
                         temp_reward[env_id] += prob * scale
