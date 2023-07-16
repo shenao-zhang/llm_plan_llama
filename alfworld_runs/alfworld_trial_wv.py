@@ -16,12 +16,14 @@ import copy
 from tenacity import retry, stop_after_attempt, retry_if_exception_type, retry_if_not_exception_type
 import time
 from fairscale.nn.model_parallel.initialize import initialize_model_parallel
-from llama import *
 from pathlib import Path
 import torch, re
 import torch.distributed as dist
+from typing import List
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
 
-sample_per_node = 8
+sample_per_node = 14  # 8
 depth = 2  # depth - 1, as the first layer is not counted
 scale = 0.1
 replan = False
@@ -35,106 +37,62 @@ with open(os.path.join(FOLDER, PROMPT_FILE), 'r') as f:
 with open(os.path.join(FOLDER, VALUE_PROMPT_FILE), 'r') as f:
     value_d = json.load(f)
 
-def setup_model_parallel() -> Tuple[int, int]:
-    local_rank = int(os.environ.get("LOCAL_RANK", -1))
-    world_size = int(os.environ.get("WORLD_SIZE", -1))
 
-    torch.distributed.init_process_group("nccl")
-    initialize_model_parallel(world_size)
-    torch.cuda.set_device(local_rank)
 
-    # seed must be the same in all processes
-    torch.manual_seed(1)
-    return local_rank, world_size
+class LLM_model:
+    def __init__(self, model_path):
+        free_in_GB = int(torch.cuda.mem_get_info()[0] / 1024 ** 3)
+        max_memory = f'{free_in_GB - 2}GB'
+        n_gpus = torch.cuda.device_count()
+        max_memory = {i: max_memory for i in range(n_gpus)}
+        self.model = AutoModelForCausalLM.from_pretrained(model_path, return_dict=True,
+                                                          max_memory=max_memory, device_map='auto')
+      #  self.model = AutoModelForCausalLM.from_pretrained(model_path,  device_map='auto')
+        print('device',max_memory, self.model.device)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+        self.tokenizer.eos_id = self.tokenizer.encode('\n')[0]
+        self.tokenizer.model_max_length = 2048
+        self.tokenizer.truncation_side = 'left'
 
-def load(ckpt_dir: str, tokenizer_path: str, local_rank: int, world_size: int, max_batch_size: int) -> LLaMA:
-    start_time = time.time()
-    checkpoints = sorted(Path(ckpt_dir).glob("*.pth"))
-    assert (
-            world_size == len(checkpoints)
-    ), f"Loading a checkpoint for MP={len(checkpoints)} but world size is {world_size}"
-    ckpt_path = checkpoints[local_rank]
-    print("Loading")
-    checkpoint = torch.load(ckpt_path, map_location="cpu")
-    with open(Path(ckpt_dir) / "params.json", "r") as f:
-        params = json.loads(f.read())
+    @torch.no_grad()
+    def get_ll(
+        self,
+        prefix: str,
+        prompts: List[str],
+    ) -> List[str]:
+        bsz = len(prompts)
+        prefix_tokens = self.tokenizer(prefix, return_tensors="pt")
+        prompts_tokens = [self.tokenizer(x, return_tensors="pt") for x in prompts]
+        max_prompt_size = max([len(t.input_ids[0]) for t in prompts_tokens])
+        total_len = max_prompt_size
+        tokens = torch.full((bsz, total_len), self.tokenizer.eos_id).cuda().long()
 
-    model_args: ModelArgs = ModelArgs(max_seq_len=5120, max_batch_size=max_batch_size, **params)
-    tokenizer = Tokenizer(model_path=tokenizer_path)
-    model_args.vocab_size = tokenizer.n_words
-    torch.set_default_tensor_type(torch.cuda.HalfTensor)
-    model = Transformer(model_args).cuda().half()
-    torch.set_default_tensor_type(torch.FloatTensor)
-    model.load_state_dict(checkpoint, strict=False)
-    generator = LLaMA(model, tokenizer)
-    print(f"Loaded in {time.time() - start_time:.2f} seconds")
-    return generator
+        logits = []
+        for k, t in enumerate(prompts_tokens):
+            tokens[k, : len(t.input_ids[0])] = torch.tensor(t.input_ids)[:self.tokenizer.model_max_length].long()
+            logits.append(self.model(tokens[k:k+1, :].to(self.model.device)).logits)
 
-local_rank, world_size = setup_model_parallel()
-if local_rank > 0:
-    sys.stdout = open(os.devnull, "w")
-generator = load(
-        '../../llama/30B/', '../../llama/30B/tokenizer.model', local_rank, world_size, 1
-    )
+    #   logits = self.model(tokens.to(self.model.device)).logits
+        logits = torch.cat(logits, dim=0)
+        acc_probs = torch.zeros(bsz).to(self.model.device)
+        len_count = torch.zeros(bsz).to(self.model.device)
+        for i in range(len(prefix_tokens.input_ids[0]), max_prompt_size):
+            probs = torch.softmax(logits[:, i - 1, :], dim=-1)
+            for j in range(bsz):    
+                if tokens[j, i] != self.tokenizer.eos_id:
+                    len_count[j] += 1
+                    acc_probs[j] += torch.log(probs[j, tokens[j, i]])
 
-#single_res = generator.generate(prompts=['A dog is'], max_gen_len=100, temperature=0.0, top_p=0.9)
-#print(single_res)
-"""
-results = generator.get_ll(
-    prefix="A dog is", prompts=["A dog is an animal.", "A dog is a four-legged animal.", single_res[0]]
-)
-        print(results)
+        return torch.exp(acc_probs / len_count).cpu().numpy()
 
-@retry(
-    stop=stop_after_attempt(4),
-    retry=retry_if_not_exception_type((ValueError, OSError))
-    #retry=retry_if_exception_type(openai.error.APIConnectionError),
-)
-def call_openai_api(prompt, stop, n, temperature=2.0):
-    response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=prompt,
-        logprobs=0,
-        temperature=temperature,
-        max_tokens=100,
-        top_p=0.8,
-        n=n,
-        frequency_penalty=0.0,
-        presence_penalty=0.0,
-        stop=stop,
-    )
-  #  time.sleep(0.2)
-    return response
+# llm = LLM_model(model_path="/mnt/bd/bloom-model/bloom_models/bloom-3b/") # wrong at env 2
+#llm = LLM_model(model_path="/mnt/bd/bloom-model/meta_model/galactica-6.7b/")  # wrong at env 2
+#llm = LLM_model(model_path="/mnt/bd/bloom-model/llama_model/llama_13B/") # half is wrong
+#llm = LLM_model(model_path='/mnt/bd/bloom-model/bloom_models/bloom-3b/') # wrong at env 2
+#llm = LLM_model(model_path='lmsys/vicuna-13b-v1.3') # wrong at env 2
+#llm = LLM_model(model_path='/mnt/bd/bloom-model/bloom_models/bloomz-1b7')
+llm = LLM_model(model_path='/mnt/bd/bloom-model/bloom_models/bloomz-560m')
 
-def llm(prompt, stop=["\n"], n=8, temperature=2.0):
-    openai.api_key = "jQlEvealzOcL4aXXVzOsm5yOANVn2Jsk"
-    openai.api_type = "azure"
-    openai.api_base = "https://search.bytedance.net/gpt/openapi/online/v2/crawl"
-    openai.api_version = "2023-06-01-preview"
-    response = call_openai_api(prompt, stop, n=n, temperature=temperature)
-    for tries in range(1, 10):
-        if response == {}:
-            response = call_openai_api(prompt, stop, n=n, temperature=temperature)
-        elif all(item["text"].strip() == '' for item in response["choices"]):
-                response = call_openai_api(prompt, stop, n=n, temperature=temperature)
-        else:
-            break
-    response_list = []
-    for choice in response["choices"]:
-        try:
-            response_text = choice["text"].strip()
-            response_prob = math.exp(mean(choice["logprobs"]["token_logprobs"]))
-            response_list.append((response_text, response_prob))
-        except Exception as e:
-            pass
-    if n > 1:
-        response_list = sorted(response_list, key=lambda x: x[1], reverse=True)
-    try:
-        return response_list[0], response_list
-    except Exception as e:
-        return ('skip', 0.0), response_list
-
-"""
 def process_ob(ob):
     if ob.startswith('You arrive at loc '):
         ob = ob[ob.find('. ')+2:]
@@ -206,9 +164,9 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
     env_value_estimate = 0.0
     gamma = 0.9
     task_name, task_class = task
-    while cur_step < 35:
-        if num_reset<7:
-            break
+    while cur_step < 25:
+        #if num_reset<1:
+        #    break
         temp_history = [copy.deepcopy(env_history) for _ in range(sample_per_node ** depth)]
         temp_admissible = [init_admaction for _ in range(sample_per_node ** depth)]
         temp_reward = [0.0 for _ in range(sample_per_node ** depth)]
@@ -221,7 +179,7 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
                 all_prompts = [str(temp_history[parent_effective_start_idx]) + "\n>" + tt for tt in temp_admissible[parent_effective_start_idx]]
                 response_list = []
                 for action_idx, action_prompt in enumerate(all_prompts):
-                    action_prob = generator.get_ll(prefix=str(temp_history[parent_effective_start_idx]) + "\n>",
+                    action_prob = llm.get_ll(prefix=str(temp_history[parent_effective_start_idx]) + "\n>",
                                                     prompts=[action_prompt])
                     response_list.append((temp_admissible[parent_effective_start_idx][action_idx], action_prob[0]))
                 response_list = sorted(response_list, key=lambda x: x[1], reverse=True)
@@ -233,6 +191,7 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
 #                value_response = generator.generate(prompts=[str(temp_value_history[parent_effective_start_idx]) + "\n>"],
 #                                                     max_gen_len=100, temperature=0.0, top_p=0.9)
 #                value_response = value_response.split('>')[0].split('\n')[0].strip()
+                print(response_list)
                 for i, (resp, prob) in enumerate(response_list[:sample_per_node]):
                     effect_start_idx = parent_effective_start_idx + sample_per_node ** (depth - dep - 1) * i
                     effect_end_idx = parent_effective_start_idx + sample_per_node ** (depth - dep - 1) * (i + 1)
@@ -240,7 +199,7 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
                         value_estimate[env_id] = value * gamma ** dep
                         observation, _, _, temp_info = temp_envs[env_id].step([resp])
                         observation = process_ob(observation[0])
-                        print("plantraj:", resp, observation, value)
+#                        print("plantraj:", resp, observation, value)
                         admactions = temp_info['admissible_commands'][0]
                         admactions.remove('inventory') if 'inventory' in admactions else None 
                         admactions.remove('look') if 'look' in admactions else None
@@ -364,9 +323,9 @@ def run_trial(
                     num_additional_successes += 1
                 else:
                     status_str: str = f'Environment #{z} Trial #{trial_idx}: FAIL'
-                rank = dist.get_rank()
+#                rank = dist.get_rank()
 
-                if rank == 0:
+                if True:
                     # log to world log
                     with open(world_log_path, 'a') as f:
                         f.write(status_str + '\n')
