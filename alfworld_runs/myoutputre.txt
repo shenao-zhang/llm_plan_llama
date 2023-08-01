@@ -1,4 +1,0 @@
-  File "main.py", line 27
-    def main(args) -> None:
-                   ^
-SyntaxError: invalid syntax
