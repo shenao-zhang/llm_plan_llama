@@ -9,7 +9,7 @@ from typing import Any, List, Dict
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--num_trials", type=int, default=1, help="The number of trials to run")
+    parser.add_argument("--num_trials", type=int, default=10, help="The number of trials to run")
     parser.add_argument("--num_envs", type=int, default=134, help="The number of environments per trial")
     parser.add_argument("--run_name", type=str, default='ours_run_logs',help="The name of the run")
     parser.add_argument("--use_memory", action='store_true', help="Allow the Agent to use memory")
@@ -101,8 +101,8 @@ def main(args) -> None:
         run_trial(trial_log_path, world_log_path, trial_idx, env_configs, args.use_memory)
 
         # update memory if needed
-        if args.use_memory:
-            env_configs: List[Dict[str, Any]] = update_memory(trial_log_path, env_configs)
+    #    if args.use_memory:
+    #        env_configs: List[Dict[str, Any]] = update_memory(trial_log_path, env_configs)
 
         # log env configs for trial
         with open(trial_env_configs_log_path, 'w') as wf:

@@ -15,16 +15,18 @@ import math
 import copy
 from tenacity import retry, stop_after_attempt, retry_if_exception_type, retry_if_not_exception_type
 import time
+from fairscale.nn.model_parallel.initialize import initialize_model_parallel
 from pathlib import Path
 import torch, re
 import torch.distributed as dist
 from typing import List
-import torch, openai
+from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModelForSeq2SeqLM
+import torch
 import numpy as np
-import random
+from fastchat.model import load_model
 
 
-base_sample_num = 3 # 5
+sample_per_node = 20 # 20 (12 not working)
 depth = 2  # depth - 1, as the first layer is not counted
 scale = 0.1
 replan = False
@@ -40,75 +42,63 @@ with open(os.path.join(FOLDER, VALUE_PROMPT_FILE), 'r') as f:
 
 
 
-@retry(
-    stop=stop_after_attempt(4),
-    retry=retry_if_not_exception_type((ValueError, OSError))
-    #retry=retry_if_exception_type(openai.error.APIConnectionError),
-)
-def call_openai_api(prompt, stop, n, temperature=0.0, chatcompletion=None):
-    if chatcompletion:
-        response = openai.ChatCompletion.create(
-         #   engine="text-davinci-003",
-            model='gpt-3.5-turbo',
-         #   engine='gpt-4',
-            messages=[
-                {"role": "user", "content": prompt}],
-         #   prompt=prompt,
-         #   logprobs=0,
-            temperature=temperature,
-            max_tokens=100,
-            top_p=1.0,  # 0.8
-         #   n=n,
-         #   frequency_penalty=0.0,
-         #   presence_penalty=0.0,
-            stop=stop,
-        )
-    else:
-        response = openai.Completion.create(
-            engine="text-davinci-003",
-          # engine='gpt-35-turbo',
-         ##   messages=[
-          #      {"role": "user", "content": prompt}],
-            prompt=prompt,
-            logprobs=0,
-            temperature=temperature,
-            max_tokens=100,
-            top_p=1.0, #0.8
-            n=n,
-            frequency_penalty=0.0,
-            presence_penalty=0.0,
-            stop=stop,
-        )
-  #  time.sleep(0.2)
-    return response
-
-
-def llm_n(prompt, stop=["\n"], n=8, temperature=1.0, chatcompletion=False):  #n=60
-  #  openai.api_key = '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'
-  #  """
-    openai.api_key = "jQlEvealzOcL4aXXVzOsm5yOANVn2Jsk"
-    openai.api_type = "azure"
-    openai.api_base = "https://search.bytedance.net/gpt/openapi/online/v2/crawl"
-    openai.api_version = "2023-06-01-preview"
-  #  """
-    response = call_openai_api(prompt, stop, n=n, temperature=temperature, chatcompletion=chatcompletion)
-    for tries in range(1, 4):
-        if response == {}:
-            response = call_openai_api(prompt, stop, n=n, temperature=temperature, chatcompletion=chatcompletion)
-        elif all(item["text"].strip() == '' for item in response["choices"]):
-                response = call_openai_api(prompt, stop, n=n, temperature=temperature, chatcompletion=chatcompletion)
+class LLM_model:
+    def __init__(self, model_path):
+        if model_path.startswith('lmsys'):
+            self.model, self.tokenizer = load_model(model_path=model_path, device='cuda', num_gpus=1)
         else:
-            break
-    response_list = []
-    for choice in response["choices"]:
-        try:
-            response_text = choice["text"].strip()
-            response_prob = math.exp(mean(choice["logprobs"]["token_logprobs"]))
-            response_list.append((response_text, response_prob))
-        except Exception as e:
-            pass
-    response_list = sorted(response_list, key=lambda x: x[1], reverse=True)
-    return response_list
+            free_in_GB = int(torch.cuda.mem_get_info()[0] / 1024 ** 3)
+            max_memory = f'{free_in_GB - 2}GB'
+            n_gpus = torch.cuda.device_count()
+            max_memory = {i: max_memory for i in range(n_gpus)}
+            self.model = AutoModelForCausalLM.from_pretrained(model_path, return_dict=True,
+                                                            max_memory=max_memory, device_map='auto')
+            print('device',max_memory, self.model.device)
+            self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+
+        self.tokenizer.eos_id = self.tokenizer.encode('\n')[0]
+        self.tokenizer.model_max_length = 2048
+        self.tokenizer.truncation_side = 'left'
+
+    @torch.no_grad()
+    def get_ll(
+        self,
+        prefix: str,
+        prompts: List[str],
+    ) -> List[str]:
+        bsz = len(prompts)
+        prefix_tokens = self.tokenizer(prefix, return_tensors="pt")
+        prompts_tokens = [self.tokenizer(x, return_tensors="pt") for x in prompts]
+        max_prompt_size = max([len(t.input_ids[0]) for t in prompts_tokens])
+        total_len = max_prompt_size
+        tokens = torch.full((bsz, total_len), self.tokenizer.eos_id).cuda().long()
+
+        logits = []
+        for k, t in enumerate(prompts_tokens):
+            tokens[k, : len(t.input_ids[0])] = torch.tensor(t.input_ids)[:self.tokenizer.model_max_length].long()
+            logits.append(self.model(tokens[k:k+1, :].to(self.model.device)).logits)
+
+    #   logits = self.model(tokens.to(self.model.device)).logits
+        logits = torch.cat(logits, dim=0)
+        acc_probs = torch.zeros(bsz).to(self.model.device)
+        len_count = torch.zeros(bsz).to(self.model.device)
+        for i in range(len(prefix_tokens.input_ids[0]), max_prompt_size):
+            probs = torch.softmax(logits[:, i - 1, :], dim=-1)
+            for j in range(bsz):    
+                if tokens[j, i] != self.tokenizer.eos_id:
+                    len_count[j] += 1
+                    acc_probs[j] += torch.log(probs[j, tokens[j, i]])
+
+        return torch.exp(acc_probs / len_count).cpu().numpy()
+
+# llm = LLM_model(model_path="/mnt/bd/bloom-model/bloom_models/bloom-3b/") # wrong at env 2
+#llm = LLM_model(model_path="/mnt/bd/bloom-model/meta_model/galactica-6.7b/")  # wrong at env 2
+#llm = LLM_model(model_path="/mnt/bd/bloom-model/llama_model/llama_13B/") # half is wrong
+#llm = LLM_model(model_path='/mnt/bd/bloom-model/bloom_models/bloom-3b/') # wrong at env 2
+#llm = LLM_model(model_path='lmsys/vicuna-13b-v1.3') # wrong at env 2
+#llm = LLM_model(model_path='/mnt/bd/bloom-model/bloom_models/bloomz-1b7')
+llm = LLM_model(model_path='/mnt/bd/bloom-model/bloom_models/bloomz-560m')
+#llm = LLM_model(model_path='lmsys/vicuna-7b-v1.3')  # 20
 
 def process_ob(ob):
     if ob.startswith('You arrive at loc '):
@@ -169,7 +159,7 @@ def value_estimation(task_class, task_name, receptacle_list, history):
     return value
 
 
-def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp_envs=None, temp_envs_before_init=None, init_admaction=None, task=None, num_reset=None, sample_per_node=base_sample_num) -> Tuple[EnvironmentHistory, bool]:
+def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp_envs=None, temp_envs_before_init=None, init_admaction=None, task=None, num_reset=None) -> Tuple[EnvironmentHistory, bool]:
     if len(memory) > 3:
         env_history = EnvironmentHistory(base_prompt, ob, memory[-3:], [])
     else:
@@ -183,7 +173,9 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
     env_value_estimate = 0.0
     gamma = 0.9
     task_name, task_class = task
-    while cur_step < 10 + 5 * (sample_per_node // base_sample_num - 1):
+    while cur_step < 15:
+#        if num_reset<2:
+#            break
         temp_history = [copy.deepcopy(env_history) for _ in range(sample_per_node ** depth)]
         temp_admissible = [init_admaction for _ in range(sample_per_node ** depth)]
         temp_reward = [0.0 for _ in range(sample_per_node ** depth)]
@@ -192,17 +184,16 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
             layer_samples = sample_per_node ** dep
             for parent_idx in range(layer_samples):
                 parent_effective_start_idx = sample_per_node ** (depth - dep) * parent_idx
-                response_list = llm_n(str(temp_history[parent_effective_start_idx]) + "\n>", stop=['\n'])
-                response_list = list(dict(response_list).items())
-                admactions = temp_admissible[parent_effective_start_idx]
-                admactions.remove('inventory') if 'inventory' in admactions else None
-                admactions.remove('look') if 'look' in admactions else None
-                admactions = [s for s in admactions if not s.startswith('examine') and not s.startswith('close')]
-                response_list = [(key, res) for key, res in response_list if key in admactions]
-            #    if response_list == []:
-            #        continue
-                additional_actions = [(item, 0.2) for item in admactions[:sample_per_node - len(response_list)]]
-                response_list = response_list[:sample_per_node] + additional_actions  # pad the response_list
+
+                all_prompts = [str(temp_history[parent_effective_start_idx]) + "\n>" + tt for tt in temp_admissible[parent_effective_start_idx]]
+                response_list = []
+                for action_idx, action_prompt in enumerate(all_prompts):
+                    action_prob = llm.get_ll(prefix=str(temp_history[parent_effective_start_idx]) + "\n>",
+                                                    prompts=[action_prompt])
+                    response_list.append((temp_admissible[parent_effective_start_idx][action_idx], action_prob[0]))
+                response_list = sorted(response_list, key=lambda x: x[1], reverse=True)
+              #  response_list = sorted(response_list, key=lambda x: x[1] + np.random.normal(0, 0.1, 1), reverse=True)
+#                print("parent_idx", parent_idx, response_list)
                 if cur_step != 0 or dep != 0:
                     value = value_estimation(task_class, task_name, receptacle_list, temp_history[parent_effective_start_idx]._history)
                 else:
@@ -210,9 +201,9 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
 #                value_response = generator.generate(prompts=[str(temp_value_history[parent_effective_start_idx]) + "\n>"],
 #                                                     max_gen_len=100, temperature=0.0, top_p=0.9)
 #                value_response = value_response.split('>')[0].split('\n')[0].strip()
-              #  traverse_num = min(sample_per_node, len(response_list))
-            #    print("parent_idx", parent_idx, response_list)
-                for i, (resp, prob) in enumerate(response_list[:sample_per_node]):
+                print(response_list)
+                traverse_num = min(sample_per_node, len(response_list))
+                for i, (resp, prob) in enumerate(response_list[:traverse_num]):
                     effect_start_idx = parent_effective_start_idx + sample_per_node ** (depth - dep - 1) * i
                     effect_end_idx = parent_effective_start_idx + sample_per_node ** (depth - dep - 1) * (i + 1)
                     for env_id in range(effect_start_idx, effect_end_idx):
@@ -220,7 +211,11 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
                         observation, _, _, temp_info = temp_envs[env_id].step([resp])
                         observation = process_ob(observation[0])
 #                        print("plantraj:", resp, observation, value)
-                        temp_admissible[env_id] = temp_info['admissible_commands'][0]
+                        admactions = temp_info['admissible_commands'][0]
+                        admactions.remove('inventory') if 'inventory' in admactions else None 
+                        admactions.remove('look') if 'look' in admactions else None
+                        admactions = [s for s in admactions if not s.startswith('examine') ]
+                        temp_admissible[env_id] = admactions
                         temp_reward[env_id] += prob * scale
                         temp_history[env_id].add("action", resp)
                         temp_history[env_id].add("observation", observation)
@@ -229,11 +224,10 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
                                                                       temp_history[env_id]._history) * gamma ** dep
    #     rew_value = temp_reward + value_estimate
         rew_value = [sum(x) for x in zip(temp_reward, value_estimate)]
-        if all(elem == value_estimate[0] for elem in value_estimate):
-            argmax = random.choices(range(len(temp_reward)), weights=temp_reward, k=1)[0]
+        argmax = rew_value.index(max(rew_value))
+        if temp_reward[argmax] > value_estimate[argmax]:
             print("Cumulative reward dominates!")
         else:
-            argmax = rew_value.index(max(rew_value))
             print("Value estimation dominates!")
         print(value_estimate)
         env_value_estimate = value_estimate[argmax]
@@ -259,8 +253,8 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
         init_admaction = info['admissible_commands'][0]
         for ii, tem_e in enumerate(temp_envs):
             tem_e = temp_envs_before_init[ii].init_env(batch_size=1)
-            tem_e.skip(nb_games=num_reset)
-            _, _ = tem_e.reset()
+            for _ in range(num_reset + 1):  # the first num_reset makes tem_e at the same environment as env
+                _, _ = tem_e.reset()
             for prev_step in env_history._history:
                 if prev_step['label'] == "action":
                     _, _, _, _ = tem_e.step([prev_step["value"]])
@@ -285,7 +279,6 @@ def run_trial(
     ) -> List[Dict[str, Any]]:
     importlib.reload(alfworld)
     importlib.reload(alfworld.agents.environment)
-    sample_per_node = base_sample_num + 2 * trial_idx
 
     with open('base_config.yaml') as reader:
         config = yaml.safe_load(reader)
@@ -299,17 +292,21 @@ def run_trial(
     num_successes: int = 0
     num_additional_successes: int = 0
     num_envs: int = len(env_configs)
+
     for z, env_config in enumerate(env_configs):
         print(f'{z} / {len(env_configs)}')
         ob, info = env.reset()
         init_admaction = info['admissible_commands'][0][:-2]
+      #  admissiable_actions = info['admissible_commands'][0]
+      #  temp_admissible = [admissiable_actions for _ in range(sample_per_node ** depth)]
         for tem_e in temp_envs:
-            _, _ = tem_e.reset()
+            tem_ob, tem_info = tem_e.reset()
 
         ob = '\n'.join(ob[0].split('\n\n')[1:])
         name = '/'.join(info['extra.gamefile'][0].split('/')[-3:-1])
 
         print(f"using {name}")
+
         if env_config["is_success"]:
             num_successes += 1
 
@@ -327,7 +324,7 @@ def run_trial(
                 final_env_history, is_success = alfworld_run(env, base_prompt, env_config["memory"] if use_memory else [],
                                                              to_print=True, ob=ob, temp_envs=temp_envs,
                                                              temp_envs_before_init=temp_envs_before_init,
-                                                             init_admaction=init_admaction, task=(name, v), num_reset=z, sample_per_node=sample_per_node)
+                                                             init_admaction=init_admaction, task=(name, v), num_reset=z)
 
                 # update env config
                 if is_success:

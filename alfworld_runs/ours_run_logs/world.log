@@ -4,59 +4,1012 @@
 
 Environment #0 Trial #0: SUCCESS
 Environment #1 Trial #0: SUCCESS
-
-
-***** Start Trial #0 *****
-
-Environment #0 Trial #0: SUCCESS
-Environment #1 Trial #0: SUCCESS
-
-
-***** Start Trial #0 *****
-
-Environment #0 Trial #0: SUCCESS
-Environment #1 Trial #0: SUCCESS
-
-
-***** Start Trial #0 *****
-
-Environment #0 Trial #0: FAIL
-Environment #1 Trial #0: SUCCESS
-Environment #2 Trial #0: SUCCESS
-Environment #3 Trial #0: FAIL
+Environment #2 Trial #0: FAIL
+Environment #3 Trial #0: SUCCESS
 Environment #4 Trial #0: SUCCESS
-Environment #5 Trial #0: FAIL
+Environment #5 Trial #0: SUCCESS
+Environment #6 Trial #0: FAIL
+Environment #7 Trial #0: SUCCESS
+Environment #8 Trial #0: FAIL
+Environment #9 Trial #0: SUCCESS
+Environment #10 Trial #0: SUCCESS
+Environment #11 Trial #0: FAIL
+Environment #12 Trial #0: SUCCESS
+Environment #13 Trial #0: FAIL
+Environment #14 Trial #0: SUCCESS
+Environment #15 Trial #0: SUCCESS
+Environment #16 Trial #0: SUCCESS
+Environment #17 Trial #0: SUCCESS
+Environment #18 Trial #0: SUCCESS
+Environment #19 Trial #0: SUCCESS
+Environment #20 Trial #0: FAIL
+Environment #21 Trial #0: SUCCESS
+Environment #22 Trial #0: SUCCESS
+Environment #23 Trial #0: SUCCESS
+Environment #24 Trial #0: FAIL
+Environment #25 Trial #0: SUCCESS
+Environment #26 Trial #0: FAIL
+Environment #27 Trial #0: FAIL
+Environment #28 Trial #0: FAIL
+Environment #29 Trial #0: SUCCESS
+Environment #30 Trial #0: FAIL
+Environment #31 Trial #0: SUCCESS
+Environment #32 Trial #0: FAIL
+Environment #33 Trial #0: FAIL
+Environment #34 Trial #0: SUCCESS
+Environment #35 Trial #0: SUCCESS
+Environment #36 Trial #0: SUCCESS
+Environment #37 Trial #0: FAIL
+Environment #38 Trial #0: SUCCESS
+Environment #39 Trial #0: SUCCESS
+Environment #40 Trial #0: SUCCESS
+Environment #41 Trial #0: SUCCESS
+Environment #42 Trial #0: FAIL
+Environment #43 Trial #0: FAIL
+Environment #44 Trial #0: SUCCESS
+Environment #45 Trial #0: SUCCESS
+Environment #46 Trial #0: SUCCESS
+Environment #47 Trial #0: FAIL
+Environment #48 Trial #0: SUCCESS
+Environment #49 Trial #0: FAIL
+Environment #50 Trial #0: FAIL
+Environment #51 Trial #0: SUCCESS
+Environment #52 Trial #0: SUCCESS
+Environment #53 Trial #0: FAIL
+Environment #54 Trial #0: FAIL
+Environment #55 Trial #0: SUCCESS
+Environment #56 Trial #0: SUCCESS
+Environment #57 Trial #0: SUCCESS
+Environment #58 Trial #0: SUCCESS
+Environment #59 Trial #0: SUCCESS
+Environment #60 Trial #0: SUCCESS
+Environment #61 Trial #0: FAIL
+Environment #62 Trial #0: SUCCESS
+Environment #63 Trial #0: SUCCESS
+Environment #64 Trial #0: SUCCESS
+Environment #65 Trial #0: FAIL
+Environment #66 Trial #0: FAIL
+Environment #67 Trial #0: SUCCESS
+Environment #68 Trial #0: FAIL
+Environment #69 Trial #0: FAIL
+Environment #70 Trial #0: SUCCESS
+Environment #71 Trial #0: SUCCESS
+Environment #72 Trial #0: FAIL
+Environment #73 Trial #0: SUCCESS
+Environment #74 Trial #0: FAIL
+Environment #75 Trial #0: SUCCESS
+Environment #76 Trial #0: FAIL
+Environment #77 Trial #0: SUCCESS
+Environment #78 Trial #0: SUCCESS
+Environment #79 Trial #0: SUCCESS
+Environment #80 Trial #0: SUCCESS
+Environment #81 Trial #0: FAIL
+Environment #82 Trial #0: SUCCESS
+Environment #83 Trial #0: FAIL
+Environment #84 Trial #0: SUCCESS
+Environment #85 Trial #0: FAIL
+Environment #86 Trial #0: SUCCESS
+Environment #87 Trial #0: SUCCESS
+Environment #88 Trial #0: FAIL
+Environment #89 Trial #0: SUCCESS
+Environment #90 Trial #0: FAIL
+Environment #91 Trial #0: SUCCESS
+Environment #92 Trial #0: FAIL
+Environment #93 Trial #0: SUCCESS
+Environment #94 Trial #0: SUCCESS
+Environment #95 Trial #0: SUCCESS
+Environment #96 Trial #0: SUCCESS
+Environment #97 Trial #0: SUCCESS
+Environment #98 Trial #0: SUCCESS
+Environment #99 Trial #0: SUCCESS
+Environment #100 Trial #0: SUCCESS
+Environment #101 Trial #0: SUCCESS
+Environment #102 Trial #0: SUCCESS
+Environment #103 Trial #0: SUCCESS
+Environment #104 Trial #0: FAIL
+Environment #105 Trial #0: SUCCESS
+Environment #106 Trial #0: FAIL
+Environment #107 Trial #0: SUCCESS
+Environment #108 Trial #0: FAIL
+Environment #109 Trial #0: SUCCESS
+Environment #110 Trial #0: SUCCESS
+Environment #111 Trial #0: FAIL
+Environment #112 Trial #0: FAIL
+Environment #113 Trial #0: FAIL
+Environment #114 Trial #0: FAIL
+Environment #115 Trial #0: FAIL
+Environment #116 Trial #0: SUCCESS
+Environment #117 Trial #0: FAIL
+Environment #118 Trial #0: SUCCESS
+Environment #119 Trial #0: SUCCESS
+Environment #120 Trial #0: FAIL
+Environment #121 Trial #0: FAIL
+Environment #122 Trial #0: FAIL
+Environment #123 Trial #0: SUCCESS
+Environment #124 Trial #0: FAIL
+Environment #125 Trial #0: SUCCESS
+Environment #126 Trial #0: FAIL
+Environment #127 Trial #0: SUCCESS
+Environment #128 Trial #0: SUCCESS
+Environment #129 Trial #0: SUCCESS
+Environment #130 Trial #0: SUCCESS
+Environment #131 Trial #0: SUCCESS
+Environment #132 Trial #0: FAIL
+Environment #133 Trial #0: SUCCESS
+
+-----
+SUCCESS: 84
+ADDITIONAL SUCCESS: 84
+FAIL: 50
+TOTAL: 134
+ACCURACY: 0.63
+-----
 
 
-***** Start Trial #0 *****
-
-Environment #0 Trial #0: FAIL
+***** End Trial #0 *****
 
 
-***** Start Trial #0 *****
 
-Environment #0 Trial #0: FAIL
-Environment #1 Trial #0: SUCCESS
+***** Start Trial #1 *****
+
+Environment #0 Trial #1: SUCCESS
+Environment #1 Trial #1: SUCCESS
+Environment #2 Trial #1: FAIL
+Environment #3 Trial #1: SUCCESS
+Environment #4 Trial #1: SUCCESS
+Environment #5 Trial #1: SUCCESS
+Environment #6 Trial #1: FAIL
+Environment #7 Trial #1: SUCCESS
+Environment #8 Trial #1: SUCCESS
+Environment #9 Trial #1: SUCCESS
+Environment #10 Trial #1: SUCCESS
+Environment #11 Trial #1: FAIL
+Environment #12 Trial #1: SUCCESS
+Environment #13 Trial #1: FAIL
+Environment #14 Trial #1: SUCCESS
+Environment #15 Trial #1: SUCCESS
+Environment #16 Trial #1: SUCCESS
+Environment #17 Trial #1: SUCCESS
+Environment #18 Trial #1: SUCCESS
+Environment #19 Trial #1: SUCCESS
+Environment #20 Trial #1: FAIL
+Environment #21 Trial #1: SUCCESS
+Environment #22 Trial #1: SUCCESS
+Environment #23 Trial #1: SUCCESS
+Environment #24 Trial #1: FAIL
+Environment #25 Trial #1: SUCCESS
+Environment #26 Trial #1: SUCCESS
+Environment #27 Trial #1: SUCCESS
+Environment #28 Trial #1: FAIL
+Environment #29 Trial #1: SUCCESS
+Environment #30 Trial #1: FAIL
+Environment #31 Trial #1: SUCCESS
+Environment #32 Trial #1: FAIL
+Environment #33 Trial #1: SUCCESS
+Environment #34 Trial #1: SUCCESS
+Environment #35 Trial #1: SUCCESS
+Environment #36 Trial #1: SUCCESS
+Environment #37 Trial #1: FAIL
+Environment #38 Trial #1: SUCCESS
+Environment #39 Trial #1: SUCCESS
+Environment #40 Trial #1: SUCCESS
+Environment #41 Trial #1: SUCCESS
+Environment #42 Trial #1: FAIL
+Environment #43 Trial #1: FAIL
+Environment #44 Trial #1: SUCCESS
+Environment #45 Trial #1: SUCCESS
+Environment #46 Trial #1: SUCCESS
+Environment #47 Trial #1: FAIL
+Environment #48 Trial #1: SUCCESS
+Environment #49 Trial #1: FAIL
+Environment #50 Trial #1: FAIL
+Environment #51 Trial #1: SUCCESS
+Environment #52 Trial #1: SUCCESS
+Environment #53 Trial #1: FAIL
+Environment #54 Trial #1: FAIL
+Environment #55 Trial #1: SUCCESS
+Environment #56 Trial #1: SUCCESS
+Environment #57 Trial #1: SUCCESS
+Environment #58 Trial #1: SUCCESS
+Environment #59 Trial #1: SUCCESS
+Environment #60 Trial #1: SUCCESS
+Environment #61 Trial #1: FAIL
+Environment #62 Trial #1: SUCCESS
+Environment #63 Trial #1: SUCCESS
+Environment #64 Trial #1: SUCCESS
+Environment #65 Trial #1: FAIL
+Environment #66 Trial #1: FAIL
+Environment #67 Trial #1: SUCCESS
+Environment #68 Trial #1: SUCCESS
+Environment #69 Trial #1: FAIL
+Environment #70 Trial #1: SUCCESS
+Environment #71 Trial #1: SUCCESS
+Environment #72 Trial #1: FAIL
+Environment #73 Trial #1: SUCCESS
+Environment #74 Trial #1: FAIL
+Environment #75 Trial #1: SUCCESS
+Environment #76 Trial #1: SUCCESS
+Environment #77 Trial #1: SUCCESS
+Environment #78 Trial #1: SUCCESS
+Environment #79 Trial #1: SUCCESS
+Environment #80 Trial #1: SUCCESS
+Environment #81 Trial #1: FAIL
+Environment #82 Trial #1: SUCCESS
+Environment #83 Trial #1: SUCCESS
+Environment #84 Trial #1: SUCCESS
+Environment #85 Trial #1: FAIL
+Environment #86 Trial #1: SUCCESS
+Environment #87 Trial #1: SUCCESS
+Environment #88 Trial #1: SUCCESS
+Environment #89 Trial #1: SUCCESS
+Environment #90 Trial #1: SUCCESS
+Environment #91 Trial #1: SUCCESS
+Environment #92 Trial #1: SUCCESS
+Environment #93 Trial #1: SUCCESS
+Environment #94 Trial #1: SUCCESS
+Environment #95 Trial #1: SUCCESS
+Environment #96 Trial #1: SUCCESS
+Environment #97 Trial #1: SUCCESS
+Environment #98 Trial #1: SUCCESS
+Environment #99 Trial #1: SUCCESS
+Environment #100 Trial #1: SUCCESS
+Environment #101 Trial #1: SUCCESS
+Environment #102 Trial #1: SUCCESS
+Environment #103 Trial #1: SUCCESS
+Environment #104 Trial #1: SUCCESS
+Environment #105 Trial #1: SUCCESS
+Environment #106 Trial #1: SUCCESS
+Environment #107 Trial #1: SUCCESS
+Environment #108 Trial #1: FAIL
+Environment #109 Trial #1: SUCCESS
+Environment #110 Trial #1: SUCCESS
+Environment #111 Trial #1: SUCCESS
+Environment #112 Trial #1: SUCCESS
+Environment #113 Trial #1: FAIL
+Environment #114 Trial #1: FAIL
+Environment #115 Trial #1: SUCCESS
+Environment #116 Trial #1: SUCCESS
+Environment #117 Trial #1: SUCCESS
+Environment #118 Trial #1: SUCCESS
+Environment #119 Trial #1: SUCCESS
+Environment #120 Trial #1: FAIL
+Environment #121 Trial #1: FAIL
+Environment #122 Trial #1: FAIL
+Environment #123 Trial #1: SUCCESS
+Environment #124 Trial #1: FAIL
+Environment #125 Trial #1: SUCCESS
+Environment #126 Trial #1: FAIL
+Environment #127 Trial #1: SUCCESS
+Environment #128 Trial #1: SUCCESS
+Environment #129 Trial #1: SUCCESS
+Environment #130 Trial #1: SUCCESS
+Environment #131 Trial #1: SUCCESS
+Environment #132 Trial #1: SUCCESS
+Environment #133 Trial #1: SUCCESS
+
+-----
+SUCCESS: 101
+ADDITIONAL SUCCESS: 17
+FAIL: 33
+TOTAL: 134
+ACCURACY: 0.75
+-----
 
 
-***** Start Trial #0 *****
-
-Environment #0 Trial #0: FAIL
+***** End Trial #1 *****
 
 
-***** Start Trial #0 *****
 
-Environment #0 Trial #0: FAIL
-Environment #1 Trial #0: SUCCESS
+***** Start Trial #2 *****
+
+Environment #0 Trial #2: SUCCESS
+Environment #1 Trial #2: SUCCESS
+Environment #2 Trial #2: FAIL
+Environment #3 Trial #2: SUCCESS
+Environment #4 Trial #2: SUCCESS
+Environment #5 Trial #2: SUCCESS
+Environment #6 Trial #2: FAIL
+Environment #7 Trial #2: SUCCESS
+Environment #8 Trial #2: SUCCESS
+Environment #9 Trial #2: SUCCESS
+Environment #10 Trial #2: SUCCESS
+Environment #11 Trial #2: FAIL
+Environment #12 Trial #2: SUCCESS
+Environment #13 Trial #2: SUCCESS
+Environment #14 Trial #2: SUCCESS
+Environment #15 Trial #2: SUCCESS
+Environment #16 Trial #2: SUCCESS
+Environment #17 Trial #2: SUCCESS
+Environment #18 Trial #2: SUCCESS
+Environment #19 Trial #2: SUCCESS
+Environment #20 Trial #2: FAIL
+Environment #21 Trial #2: SUCCESS
+Environment #22 Trial #2: SUCCESS
+Environment #23 Trial #2: SUCCESS
+Environment #24 Trial #2: SUCCESS
+Environment #25 Trial #2: SUCCESS
+Environment #26 Trial #2: SUCCESS
+Environment #27 Trial #2: SUCCESS
+Environment #28 Trial #2: FAIL
+Environment #29 Trial #2: SUCCESS
+Environment #30 Trial #2: SUCCESS
+Environment #31 Trial #2: SUCCESS
+Environment #32 Trial #2: FAIL
+Environment #33 Trial #2: SUCCESS
+Environment #34 Trial #2: SUCCESS
+Environment #35 Trial #2: SUCCESS
+Environment #36 Trial #2: SUCCESS
+Environment #37 Trial #2: FAIL
+Environment #38 Trial #2: SUCCESS
+Environment #39 Trial #2: SUCCESS
+Environment #40 Trial #2: SUCCESS
+Environment #41 Trial #2: SUCCESS
+Environment #42 Trial #2: FAIL
+Environment #43 Trial #2: FAIL
+Environment #44 Trial #2: SUCCESS
+Environment #45 Trial #2: SUCCESS
+Environment #46 Trial #2: SUCCESS
+Environment #47 Trial #2: FAIL
+Environment #48 Trial #2: SUCCESS
+Environment #49 Trial #2: FAIL
+Environment #50 Trial #2: FAIL
+Environment #51 Trial #2: SUCCESS
+Environment #52 Trial #2: SUCCESS
+Environment #53 Trial #2: FAIL
+Environment #54 Trial #2: FAIL
+Environment #55 Trial #2: SUCCESS
+Environment #56 Trial #2: SUCCESS
+Environment #57 Trial #2: SUCCESS
+Environment #58 Trial #2: SUCCESS
+Environment #59 Trial #2: SUCCESS
+Environment #60 Trial #2: SUCCESS
+Environment #61 Trial #2: FAIL
+Environment #62 Trial #2: SUCCESS
+Environment #63 Trial #2: SUCCESS
+Environment #64 Trial #2: SUCCESS
+Environment #65 Trial #2: FAIL
+Environment #66 Trial #2: FAIL
+Environment #67 Trial #2: SUCCESS
+Environment #68 Trial #2: SUCCESS
+Environment #69 Trial #2: SUCCESS
+Environment #70 Trial #2: SUCCESS
+Environment #71 Trial #2: SUCCESS
+Environment #72 Trial #2: FAIL
+Environment #73 Trial #2: SUCCESS
+Environment #74 Trial #2: FAIL
+Environment #75 Trial #2: SUCCESS
+Environment #76 Trial #2: SUCCESS
+Environment #77 Trial #2: SUCCESS
+Environment #78 Trial #2: SUCCESS
+Environment #79 Trial #2: SUCCESS
+Environment #80 Trial #2: SUCCESS
+Environment #81 Trial #2: FAIL
+Environment #82 Trial #2: SUCCESS
+Environment #83 Trial #2: SUCCESS
+Environment #84 Trial #2: SUCCESS
+Environment #85 Trial #2: FAIL
+Environment #86 Trial #2: SUCCESS
+Environment #87 Trial #2: SUCCESS
+Environment #88 Trial #2: SUCCESS
+Environment #89 Trial #2: SUCCESS
+Environment #90 Trial #2: SUCCESS
+Environment #91 Trial #2: SUCCESS
+Environment #92 Trial #2: SUCCESS
+Environment #93 Trial #2: SUCCESS
+Environment #94 Trial #2: SUCCESS
+Environment #95 Trial #2: SUCCESS
+Environment #96 Trial #2: SUCCESS
+Environment #97 Trial #2: SUCCESS
+Environment #98 Trial #2: SUCCESS
+Environment #99 Trial #2: SUCCESS
+Environment #100 Trial #2: SUCCESS
+Environment #101 Trial #2: SUCCESS
+Environment #102 Trial #2: SUCCESS
+Environment #103 Trial #2: SUCCESS
+Environment #104 Trial #2: SUCCESS
+Environment #105 Trial #2: SUCCESS
+Environment #106 Trial #2: SUCCESS
+Environment #107 Trial #2: SUCCESS
+Environment #108 Trial #2: FAIL
+Environment #109 Trial #2: SUCCESS
+Environment #110 Trial #2: SUCCESS
+Environment #111 Trial #2: SUCCESS
+Environment #112 Trial #2: SUCCESS
+Environment #113 Trial #2: SUCCESS
+Environment #114 Trial #2: SUCCESS
+Environment #115 Trial #2: SUCCESS
+Environment #116 Trial #2: SUCCESS
+Environment #117 Trial #2: SUCCESS
+Environment #118 Trial #2: SUCCESS
+Environment #119 Trial #2: SUCCESS
+Environment #120 Trial #2: FAIL
+Environment #121 Trial #2: FAIL
+Environment #122 Trial #2: FAIL
+Environment #123 Trial #2: SUCCESS
+Environment #124 Trial #2: FAIL
+Environment #125 Trial #2: SUCCESS
+Environment #126 Trial #2: FAIL
+Environment #127 Trial #2: SUCCESS
+Environment #128 Trial #2: SUCCESS
+Environment #129 Trial #2: SUCCESS
+Environment #130 Trial #2: SUCCESS
+Environment #131 Trial #2: SUCCESS
+Environment #132 Trial #2: SUCCESS
+Environment #133 Trial #2: SUCCESS
+
+-----
+SUCCESS: 107
+ADDITIONAL SUCCESS: 6
+FAIL: 27
+TOTAL: 134
+ACCURACY: 0.8
+-----
 
 
-***** Start Trial #0 *****
-
-Environment #0 Trial #0: FAIL
+***** End Trial #2 *****
 
 
-***** Start Trial #0 *****
 
-Environment #0 Trial #0: SUCCESS
-Environment #1 Trial #0: SUCCESS
-Environment #2 Trial #0: SUCCESS
+***** Start Trial #3 *****
+
+Environment #0 Trial #3: SUCCESS
+Environment #1 Trial #3: SUCCESS
+Environment #2 Trial #3: SUCCESS
+Environment #3 Trial #3: SUCCESS
+Environment #4 Trial #3: SUCCESS
+Environment #5 Trial #3: SUCCESS
+Environment #6 Trial #3: SUCCESS
+Environment #7 Trial #3: SUCCESS
+Environment #8 Trial #3: SUCCESS
+Environment #9 Trial #3: SUCCESS
+Environment #10 Trial #3: SUCCESS
+Environment #11 Trial #3: FAIL
+Environment #12 Trial #3: SUCCESS
+Environment #13 Trial #3: SUCCESS
+Environment #14 Trial #3: SUCCESS
+Environment #15 Trial #3: SUCCESS
+Environment #16 Trial #3: SUCCESS
+Environment #17 Trial #3: SUCCESS
+Environment #18 Trial #3: SUCCESS
+Environment #19 Trial #3: SUCCESS
+Environment #20 Trial #3: SUCCESS
+Environment #21 Trial #3: SUCCESS
+Environment #22 Trial #3: SUCCESS
+Environment #23 Trial #3: SUCCESS
+Environment #24 Trial #3: SUCCESS
+Environment #25 Trial #3: SUCCESS
+Environment #26 Trial #3: SUCCESS
+Environment #27 Trial #3: SUCCESS
+Environment #28 Trial #3: SUCCESS
+Environment #29 Trial #3: SUCCESS
+Environment #30 Trial #3: SUCCESS
+Environment #31 Trial #3: SUCCESS
+Environment #32 Trial #3: FAIL
+Environment #33 Trial #3: SUCCESS
+Environment #34 Trial #3: SUCCESS
+Environment #35 Trial #3: SUCCESS
+Environment #36 Trial #3: SUCCESS
+Environment #37 Trial #3: FAIL
+Environment #38 Trial #3: SUCCESS
+Environment #39 Trial #3: SUCCESS
+Environment #40 Trial #3: SUCCESS
+Environment #41 Trial #3: SUCCESS
+
+
+***** Start Trial #3 *****
+
+Environment #0 Trial #3: SUCCESS
+Environment #1 Trial #3: SUCCESS
+Environment #2 Trial #3: FAIL
+Environment #3 Trial #3: SUCCESS
+Environment #4 Trial #3: SUCCESS
+Environment #5 Trial #3: SUCCESS
+Environment #6 Trial #3: FAIL
+Environment #7 Trial #3: SUCCESS
+Environment #8 Trial #3: SUCCESS
+Environment #9 Trial #3: SUCCESS
+Environment #10 Trial #3: SUCCESS
+Environment #11 Trial #3: SUCCESS
+Environment #12 Trial #3: SUCCESS
+Environment #13 Trial #3: SUCCESS
+Environment #14 Trial #3: SUCCESS
+Environment #15 Trial #3: SUCCESS
+Environment #16 Trial #3: SUCCESS
+Environment #17 Trial #3: SUCCESS
+Environment #18 Trial #3: SUCCESS
+Environment #19 Trial #3: SUCCESS
+Environment #20 Trial #3: SUCCESS
+Environment #21 Trial #3: SUCCESS
+Environment #22 Trial #3: SUCCESS
+Environment #23 Trial #3: SUCCESS
+Environment #24 Trial #3: SUCCESS
+Environment #25 Trial #3: SUCCESS
+Environment #26 Trial #3: SUCCESS
+Environment #27 Trial #3: SUCCESS
+Environment #28 Trial #3: FAIL
+Environment #29 Trial #3: SUCCESS
+Environment #30 Trial #3: SUCCESS
+Environment #31 Trial #3: SUCCESS
+Environment #32 Trial #3: FAIL
+Environment #33 Trial #3: SUCCESS
+Environment #34 Trial #3: SUCCESS
+Environment #35 Trial #3: SUCCESS
+Environment #36 Trial #3: SUCCESS
+Environment #37 Trial #3: SUCCESS
+Environment #38 Trial #3: SUCCESS
+Environment #39 Trial #3: SUCCESS
+Environment #40 Trial #3: SUCCESS
+Environment #41 Trial #3: SUCCESS
+Environment #42 Trial #3: FAIL
+Environment #43 Trial #3: FAIL
+Environment #44 Trial #3: SUCCESS
+Environment #45 Trial #3: SUCCESS
+Environment #46 Trial #3: SUCCESS
+Environment #47 Trial #3: SUCCESS
+Environment #48 Trial #3: SUCCESS
+Environment #49 Trial #3: FAIL
+Environment #50 Trial #3: FAIL
+Environment #51 Trial #3: SUCCESS
+Environment #52 Trial #3: SUCCESS
+Environment #53 Trial #3: FAIL
+Environment #54 Trial #3: FAIL
+Environment #55 Trial #3: SUCCESS
+Environment #56 Trial #3: SUCCESS
+Environment #57 Trial #3: SUCCESS
+Environment #58 Trial #3: SUCCESS
+Environment #59 Trial #3: SUCCESS
+Environment #60 Trial #3: SUCCESS
+Environment #61 Trial #3: FAIL
+Environment #62 Trial #3: SUCCESS
+Environment #63 Trial #3: SUCCESS
+Environment #64 Trial #3: SUCCESS
+Environment #65 Trial #3: FAIL
+Environment #66 Trial #3: FAIL
+Environment #67 Trial #3: SUCCESS
+Environment #68 Trial #3: SUCCESS
+Environment #69 Trial #3: SUCCESS
+Environment #70 Trial #3: SUCCESS
+Environment #71 Trial #3: SUCCESS
+Environment #72 Trial #3: FAIL
+Environment #73 Trial #3: SUCCESS
+Environment #74 Trial #3: FAIL
+Environment #75 Trial #3: SUCCESS
+Environment #76 Trial #3: SUCCESS
+Environment #77 Trial #3: SUCCESS
+Environment #78 Trial #3: SUCCESS
+Environment #79 Trial #3: SUCCESS
+Environment #80 Trial #3: SUCCESS
+Environment #81 Trial #3: FAIL
+Environment #82 Trial #3: SUCCESS
+Environment #83 Trial #3: SUCCESS
+Environment #84 Trial #3: SUCCESS
+Environment #85 Trial #3: SUCCESS
+Environment #86 Trial #3: SUCCESS
+Environment #87 Trial #3: SUCCESS
+Environment #88 Trial #3: SUCCESS
+Environment #89 Trial #3: SUCCESS
+Environment #90 Trial #3: SUCCESS
+Environment #91 Trial #3: SUCCESS
+Environment #92 Trial #3: SUCCESS
+Environment #93 Trial #3: SUCCESS
+Environment #94 Trial #3: SUCCESS
+Environment #95 Trial #3: SUCCESS
+Environment #96 Trial #3: SUCCESS
+Environment #97 Trial #3: SUCCESS
+Environment #98 Trial #3: SUCCESS
+Environment #99 Trial #3: SUCCESS
+Environment #100 Trial #3: SUCCESS
+Environment #101 Trial #3: SUCCESS
+Environment #102 Trial #3: SUCCESS
+Environment #103 Trial #3: SUCCESS
+Environment #104 Trial #3: SUCCESS
+Environment #105 Trial #3: SUCCESS
+Environment #106 Trial #3: SUCCESS
+Environment #107 Trial #3: SUCCESS
+Environment #108 Trial #3: FAIL
+Environment #109 Trial #3: SUCCESS
+Environment #110 Trial #3: SUCCESS
+Environment #111 Trial #3: SUCCESS
+Environment #112 Trial #3: SUCCESS
+Environment #113 Trial #3: SUCCESS
+Environment #114 Trial #3: SUCCESS
+Environment #115 Trial #3: SUCCESS
+Environment #116 Trial #3: SUCCESS
+Environment #117 Trial #3: SUCCESS
+Environment #118 Trial #3: SUCCESS
+Environment #119 Trial #3: SUCCESS
+Environment #120 Trial #3: FAIL
+Environment #121 Trial #3: FAIL
+Environment #122 Trial #3: FAIL
+Environment #123 Trial #3: SUCCESS
+Environment #124 Trial #3: FAIL
+Environment #125 Trial #3: SUCCESS
+Environment #126 Trial #3: FAIL
+Environment #127 Trial #3: SUCCESS
+Environment #128 Trial #3: SUCCESS
+Environment #129 Trial #3: SUCCESS
+Environment #130 Trial #3: SUCCESS
+Environment #131 Trial #3: SUCCESS
+Environment #132 Trial #3: SUCCESS
+Environment #133 Trial #3: SUCCESS
+
+-----
+SUCCESS: 112
+ADDITIONAL SUCCESS: 5
+FAIL: 22
+TOTAL: 134
+ACCURACY: 0.84
+-----
+
+
+***** End Trial #3 *****
+
+
+
+***** Start Trial #4 *****
+
+Environment #0 Trial #4: SUCCESS
+Environment #1 Trial #4: SUCCESS
+Environment #2 Trial #4: SUCCESS
+Environment #3 Trial #4: SUCCESS
+Environment #4 Trial #4: SUCCESS
+Environment #5 Trial #4: SUCCESS
+Environment #6 Trial #4: FAIL
+Environment #7 Trial #4: SUCCESS
+Environment #8 Trial #4: SUCCESS
+Environment #9 Trial #4: SUCCESS
+Environment #10 Trial #4: SUCCESS
+Environment #11 Trial #4: SUCCESS
+Environment #12 Trial #4: SUCCESS
+Environment #13 Trial #4: SUCCESS
+Environment #14 Trial #4: SUCCESS
+Environment #15 Trial #4: SUCCESS
+Environment #16 Trial #4: SUCCESS
+Environment #17 Trial #4: SUCCESS
+Environment #18 Trial #4: SUCCESS
+Environment #19 Trial #4: SUCCESS
+Environment #20 Trial #4: SUCCESS
+Environment #21 Trial #4: SUCCESS
+Environment #22 Trial #4: SUCCESS
+Environment #23 Trial #4: SUCCESS
+Environment #24 Trial #4: SUCCESS
+Environment #25 Trial #4: SUCCESS
+Environment #26 Trial #4: SUCCESS
+Environment #27 Trial #4: SUCCESS
+Environment #28 Trial #4: FAIL
+Environment #29 Trial #4: SUCCESS
+Environment #30 Trial #4: SUCCESS
+Environment #31 Trial #4: SUCCESS
+Environment #32 Trial #4: FAIL
+Environment #33 Trial #4: SUCCESS
+Environment #34 Trial #4: SUCCESS
+Environment #35 Trial #4: SUCCESS
+Environment #36 Trial #4: SUCCESS
+Environment #37 Trial #4: SUCCESS
+Environment #38 Trial #4: SUCCESS
+Environment #39 Trial #4: SUCCESS
+Environment #40 Trial #4: SUCCESS
+Environment #41 Trial #4: SUCCESS
+
+
+***** Start Trial #4 *****
+
+
+
+***** Start Trial #4 *****
+
+Environment #0 Trial #4: SUCCESS
+Environment #1 Trial #4: SUCCESS
+Environment #2 Trial #4: SUCCESS
+Environment #3 Trial #4: SUCCESS
+Environment #4 Trial #4: SUCCESS
+Environment #5 Trial #4: SUCCESS
+Environment #6 Trial #4: FAIL
+Environment #7 Trial #4: SUCCESS
+Environment #8 Trial #4: SUCCESS
+Environment #9 Trial #4: SUCCESS
+Environment #10 Trial #4: SUCCESS
+Environment #11 Trial #4: SUCCESS
+Environment #12 Trial #4: SUCCESS
+Environment #13 Trial #4: SUCCESS
+Environment #14 Trial #4: SUCCESS
+Environment #15 Trial #4: SUCCESS
+Environment #16 Trial #4: SUCCESS
+Environment #17 Trial #4: SUCCESS
+Environment #18 Trial #4: SUCCESS
+Environment #19 Trial #4: SUCCESS
+Environment #20 Trial #4: SUCCESS
+Environment #21 Trial #4: SUCCESS
+Environment #22 Trial #4: SUCCESS
+Environment #23 Trial #4: SUCCESS
+Environment #24 Trial #4: SUCCESS
+Environment #25 Trial #4: SUCCESS
+Environment #26 Trial #4: SUCCESS
+Environment #27 Trial #4: SUCCESS
+Environment #28 Trial #4: SUCCESS
+Environment #29 Trial #4: SUCCESS
+Environment #30 Trial #4: SUCCESS
+Environment #31 Trial #4: SUCCESS
+Environment #32 Trial #4: SUCCESS
+Environment #33 Trial #4: SUCCESS
+Environment #34 Trial #4: SUCCESS
+Environment #35 Trial #4: SUCCESS
+Environment #36 Trial #4: SUCCESS
+Environment #37 Trial #4: SUCCESS
+Environment #38 Trial #4: SUCCESS
+Environment #39 Trial #4: SUCCESS
+Environment #40 Trial #4: SUCCESS
+Environment #41 Trial #4: SUCCESS
+Environment #42 Trial #4: FAIL
+Environment #43 Trial #4: SUCCESS
+Environment #44 Trial #4: SUCCESS
+Environment #45 Trial #4: SUCCESS
+Environment #46 Trial #4: SUCCESS
+Environment #47 Trial #4: SUCCESS
+Environment #48 Trial #4: SUCCESS
+Environment #49 Trial #4: SUCCESS
+Environment #50 Trial #4: SUCCESS
+Environment #51 Trial #4: SUCCESS
+Environment #52 Trial #4: SUCCESS
+Environment #53 Trial #4: SUCCESS
+Environment #54 Trial #4: SUCCESS
+Environment #55 Trial #4: SUCCESS
+Environment #56 Trial #4: SUCCESS
+Environment #57 Trial #4: SUCCESS
+Environment #58 Trial #4: SUCCESS
+Environment #59 Trial #4: SUCCESS
+Environment #60 Trial #4: SUCCESS
+Environment #61 Trial #4: SUCCESS
+Environment #62 Trial #4: SUCCESS
+Environment #63 Trial #4: SUCCESS
+Environment #64 Trial #4: SUCCESS
+Environment #65 Trial #4: SUCCESS
+Environment #66 Trial #4: FAIL
+Environment #67 Trial #4: SUCCESS
+Environment #68 Trial #4: SUCCESS
+Environment #69 Trial #4: SUCCESS
+Environment #70 Trial #4: SUCCESS
+Environment #71 Trial #4: SUCCESS
+Environment #72 Trial #4: SUCCESS
+Environment #73 Trial #4: SUCCESS
+Environment #74 Trial #4: SUCCESS
+Environment #75 Trial #4: SUCCESS
+Environment #76 Trial #4: SUCCESS
+Environment #77 Trial #4: SUCCESS
+Environment #78 Trial #4: SUCCESS
+Environment #79 Trial #4: SUCCESS
+Environment #80 Trial #4: SUCCESS
+Environment #81 Trial #4: SUCCESS
+Environment #82 Trial #4: SUCCESS
+Environment #83 Trial #4: SUCCESS
+Environment #84 Trial #4: SUCCESS
+Environment #85 Trial #4: SUCCESS
+Environment #86 Trial #4: SUCCESS
+Environment #87 Trial #4: SUCCESS
+Environment #88 Trial #4: SUCCESS
+Environment #89 Trial #4: SUCCESS
+Environment #90 Trial #4: SUCCESS
+Environment #91 Trial #4: SUCCESS
+Environment #92 Trial #4: SUCCESS
+Environment #93 Trial #4: SUCCESS
+Environment #94 Trial #4: SUCCESS
+Environment #95 Trial #4: SUCCESS
+Environment #96 Trial #4: SUCCESS
+Environment #97 Trial #4: SUCCESS
+Environment #98 Trial #4: SUCCESS
+Environment #99 Trial #4: SUCCESS
+Environment #100 Trial #4: SUCCESS
+Environment #101 Trial #4: SUCCESS
+Environment #102 Trial #4: SUCCESS
+Environment #103 Trial #4: SUCCESS
+Environment #104 Trial #4: SUCCESS
+Environment #105 Trial #4: SUCCESS
+Environment #106 Trial #4: SUCCESS
+Environment #107 Trial #4: SUCCESS
+Environment #108 Trial #4: SUCCESS
+Environment #109 Trial #4: SUCCESS
+Environment #110 Trial #4: SUCCESS
+Environment #111 Trial #4: SUCCESS
+Environment #112 Trial #4: SUCCESS
+Environment #113 Trial #4: SUCCESS
+Environment #114 Trial #4: SUCCESS
+Environment #115 Trial #4: SUCCESS
+Environment #116 Trial #4: SUCCESS
+Environment #117 Trial #4: SUCCESS
+Environment #118 Trial #4: SUCCESS
+Environment #119 Trial #4: SUCCESS
+Environment #120 Trial #4: SUCCESS
+Environment #121 Trial #4: FAIL
+Environment #122 Trial #4: FAIL
+Environment #123 Trial #4: SUCCESS
+Environment #124 Trial #4: FAIL
+Environment #125 Trial #4: SUCCESS
+Environment #126 Trial #4: SUCCESS
+Environment #127 Trial #4: SUCCESS
+Environment #128 Trial #4: SUCCESS
+Environment #129 Trial #4: SUCCESS
+Environment #130 Trial #4: SUCCESS
+Environment #131 Trial #4: SUCCESS
+Environment #132 Trial #4: SUCCESS
+Environment #133 Trial #4: SUCCESS
+
+-----
+SUCCESS: 128
+ADDITIONAL SUCCESS: 16
+FAIL: 6
+TOTAL: 134
+ACCURACY: 0.96
+-----
+
+
+***** End Trial #4 *****
+
+
+
+***** Start Trial #5 *****
+
+Environment #0 Trial #5: SUCCESS
+Environment #1 Trial #5: SUCCESS
+Environment #2 Trial #5: SUCCESS
+Environment #3 Trial #5: SUCCESS
+Environment #4 Trial #5: SUCCESS
+Environment #5 Trial #5: SUCCESS
+
+
+***** Start Trial #4 *****
+
+Environment #0 Trial #4: SUCCESS
+Environment #1 Trial #4: SUCCESS
+Environment #2 Trial #4: SUCCESS
+Environment #3 Trial #4: SUCCESS
+Environment #4 Trial #4: SUCCESS
+Environment #5 Trial #4: SUCCESS
+Environment #6 Trial #4: SUCCESS
+Environment #7 Trial #4: SUCCESS
+Environment #8 Trial #4: SUCCESS
+Environment #9 Trial #4: SUCCESS
+Environment #10 Trial #4: SUCCESS
+Environment #11 Trial #4: SUCCESS
+Environment #12 Trial #4: SUCCESS
+Environment #13 Trial #4: SUCCESS
+Environment #14 Trial #4: SUCCESS
+Environment #15 Trial #4: SUCCESS
+Environment #16 Trial #4: SUCCESS
+Environment #17 Trial #4: SUCCESS
+Environment #18 Trial #4: SUCCESS
+Environment #19 Trial #4: SUCCESS
+Environment #20 Trial #4: SUCCESS
+Environment #21 Trial #4: SUCCESS
+Environment #22 Trial #4: SUCCESS
+Environment #23 Trial #4: SUCCESS
+Environment #24 Trial #4: SUCCESS
+Environment #25 Trial #4: SUCCESS
+Environment #26 Trial #4: SUCCESS
+Environment #27 Trial #4: SUCCESS
+Environment #28 Trial #4: SUCCESS
+Environment #29 Trial #4: SUCCESS
+Environment #30 Trial #4: SUCCESS
+Environment #31 Trial #4: SUCCESS
+Environment #32 Trial #4: SUCCESS
+Environment #33 Trial #4: SUCCESS
+Environment #34 Trial #4: SUCCESS
+Environment #35 Trial #4: SUCCESS
+Environment #36 Trial #4: SUCCESS
+Environment #37 Trial #4: SUCCESS
+Environment #38 Trial #4: SUCCESS
+Environment #39 Trial #4: SUCCESS
+Environment #40 Trial #4: SUCCESS
+Environment #41 Trial #4: SUCCESS
+Environment #42 Trial #4: FAIL
+Environment #43 Trial #4: SUCCESS
+Environment #44 Trial #4: SUCCESS
+Environment #45 Trial #4: SUCCESS
+Environment #46 Trial #4: SUCCESS
+Environment #47 Trial #4: SUCCESS
+Environment #48 Trial #4: SUCCESS
+Environment #49 Trial #4: SUCCESS
+Environment #50 Trial #4: SUCCESS
+Environment #51 Trial #4: SUCCESS
+Environment #52 Trial #4: SUCCESS
+Environment #53 Trial #4: SUCCESS
+Environment #54 Trial #4: SUCCESS
+Environment #55 Trial #4: SUCCESS
+Environment #56 Trial #4: SUCCESS
+Environment #57 Trial #4: SUCCESS
+Environment #58 Trial #4: SUCCESS
+Environment #59 Trial #4: SUCCESS
+Environment #60 Trial #4: SUCCESS
+Environment #61 Trial #4: SUCCESS
+Environment #62 Trial #4: SUCCESS
+Environment #63 Trial #4: SUCCESS
+Environment #64 Trial #4: SUCCESS
+Environment #65 Trial #4: SUCCESS
+Environment #66 Trial #4: FAIL
+Environment #67 Trial #4: SUCCESS
+Environment #68 Trial #4: SUCCESS
+Environment #69 Trial #4: SUCCESS
+Environment #70 Trial #4: SUCCESS
+Environment #71 Trial #4: SUCCESS
+Environment #72 Trial #4: SUCCESS
+Environment #73 Trial #4: SUCCESS
+Environment #74 Trial #4: SUCCESS
+Environment #75 Trial #4: SUCCESS
+Environment #76 Trial #4: SUCCESS
+Environment #77 Trial #4: SUCCESS
+Environment #78 Trial #4: SUCCESS
+Environment #79 Trial #4: SUCCESS
+Environment #80 Trial #4: SUCCESS
+Environment #81 Trial #4: SUCCESS
+Environment #82 Trial #4: SUCCESS
+Environment #83 Trial #4: SUCCESS
+Environment #84 Trial #4: SUCCESS
+Environment #85 Trial #4: SUCCESS
+Environment #86 Trial #4: SUCCESS
+Environment #87 Trial #4: SUCCESS
+Environment #88 Trial #4: SUCCESS
+Environment #89 Trial #4: SUCCESS
+Environment #90 Trial #4: SUCCESS
+Environment #91 Trial #4: SUCCESS
+Environment #92 Trial #4: SUCCESS
+Environment #93 Trial #4: SUCCESS
+Environment #94 Trial #4: SUCCESS
+Environment #95 Trial #4: SUCCESS
+Environment #96 Trial #4: SUCCESS
+Environment #97 Trial #4: SUCCESS
+Environment #98 Trial #4: SUCCESS
+Environment #99 Trial #4: SUCCESS
+Environment #100 Trial #4: SUCCESS
+Environment #101 Trial #4: SUCCESS
+Environment #102 Trial #4: SUCCESS
+Environment #103 Trial #4: SUCCESS
+Environment #104 Trial #4: SUCCESS
+Environment #105 Trial #4: SUCCESS
+Environment #106 Trial #4: SUCCESS
+Environment #107 Trial #4: SUCCESS
+Environment #108 Trial #4: SUCCESS
+Environment #109 Trial #4: SUCCESS
+Environment #110 Trial #4: SUCCESS
+Environment #111 Trial #4: SUCCESS
+Environment #112 Trial #4: SUCCESS
+Environment #113 Trial #4: SUCCESS
+Environment #114 Trial #4: SUCCESS
+Environment #115 Trial #4: SUCCESS
+Environment #116 Trial #4: SUCCESS
+Environment #117 Trial #4: SUCCESS
+Environment #118 Trial #4: SUCCESS
+Environment #119 Trial #4: SUCCESS
+Environment #120 Trial #4: SUCCESS
+Environment #121 Trial #4: FAIL
+Environment #122 Trial #4: FAIL
+Environment #123 Trial #4: SUCCESS
+Environment #124 Trial #4: SUCCESS
+Environment #125 Trial #4: SUCCESS
+Environment #126 Trial #4: SUCCESS
+Environment #127 Trial #4: SUCCESS
+Environment #128 Trial #4: SUCCESS
+Environment #129 Trial #4: SUCCESS
+Environment #130 Trial #4: SUCCESS
+Environment #131 Trial #4: SUCCESS
+Environment #132 Trial #4: SUCCESS
+Environment #133 Trial #4: SUCCESS
+
+-----
+SUCCESS: 130
+ADDITIONAL SUCCESS: 18
+FAIL: 4
+TOTAL: 134
+ACCURACY: 0.97
+-----
+
+
+***** End Trial #4 *****
+
+
+
+***** Start Trial #5 *****
+
+Environment #0 Trial #5: SUCCESS
+Environment #1 Trial #5: SUCCESS
+Environment #2 Trial #5: SUCCESS
+Environment #3 Trial #5: SUCCESS
+Environment #4 Trial #5: SUCCESS

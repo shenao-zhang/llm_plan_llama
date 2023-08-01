@@ -1,0 +1,15 @@
+
+    -----
+    Starting run with the following parameters:
+    Run name: debugours_run_logs
+    Number of trials: 10
+    Number of environments: 134
+    Use memory: False
+
+    Sending all logs to `debugours_run_logs`
+    -----
+    
+Initializing AlfredTWEnv...
+Checking for solvable games...
+Overall we have 134 games
+Evaluating with 134 games

@@ -1,0 +1,3544 @@
+
+#####
+
+Environment #0: Success
+
+#####
+
+#####
+
+Environment #1: Success
+
+#####
+
+#####
+
+Environment #2:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a cool mug in shelf.
+> go to countertop 1
+On the countertop 1, you see a knife 1, a pan 2, a pan 1, and a plate 1.
+> go to countertop 2
+On the countertop 2, you see a apple 2, a butterknife 2, a fork 3, a houseplant 1, a knife 2, a lettuce 3, a spatula 1, and a winebottle 1.
+> go to countertop 3
+On the countertop 3, you see a apple 1, a book 1, a bread 1, a butterknife 3, a glassbottle 2, a glassbottle 1, a knife 3, a lettuce 2, a lettuce 1, a papertowelroll 1, a plate 3, a spoon 1, a statue 1, and a vase 2.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> go to cabinet 1
+The cabinet 1 is closed.
+> open cabinet 1
+You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see nothing.
+> go to cabinet 3
+The cabinet 3 is closed.
+> open cabinet 3
+You open the cabinet 3. The cabinet 3 is open. In it, you see a pot 1.
+> go to cabinet 4
+On the cabinet 4, you see nothing.
+> go to cabinet 5
+The cabinet 5 is closed.
+> open cabinet 5
+You open the cabinet 5. The cabinet 5 is open. In it, you see nothing.
+> go to cabinet 6
+The cabinet 6 is closed.
+> open cabinet 6
+You open the cabinet 6. The cabinet 6 is open. In it, you see a mug 3.
+> take mug 3 from cabinet 6
+You pick up the mug 3 from the cabinet 6.
+> go to fridge 1
+The fridge 1 is closed.
+> cool mug 3 with fridge 1
+You cool the mug 3 using the fridge 1.
+> go to shelf 1
+On the shelf 1, you see a cup 2, a cup 1, a peppershaker 1, and a saltshaker 1.
+> put mug 3 in/on shelf 1
+You put the mug 3 in/on the shelf 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a safe 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: cool some pan and put it in stoveburner.
+>go to stoveburner 1
+On the stoveburner 1, you see nothing.
+>go to stoveburner 2
+On the stoveburner 2, you see a pot 1.
+> go to stoveburner 3
+On the stoveburner 3, you see a pan 1.
+> take pan 1 from stoveburner 3
+You pick up the pan 1 from the stoveburner 3.
+> go to fridge 1
+The fridge 1 is closed.
+> cool pan 1 with fridge 1
+You cool the pan 1 using the fridge 1.
+>go to stoveburner 1
+On the stoveburner 1, you see nothing.
+> put pan 1 in/on stoveburner 1
+You put the pan 1 in/on the stoveburner 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a cool tomato in microwave.
+> go to countertop 1
+On the countertop 1, you see a peppershaker 2, and a tomato 1.
+> take tomato 1 from countertop 1
+You pick up the tomato 1 from the countertop 1.
+> go to fridge 1
+The fridge 1 is closed.
+> cool tomato 1 with fridge 1
+You cool the tomato 1 using the fridge 1.
+> go to cabinet 1
+On the cabinet 1, you see a bowl 1.
+> go to cabinet 4
+On the cabinet 4, you see a glassbottle 1.
+> go to microwave 1
+The microwave 1 is closed.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> go to cabinet 1
+On the cabinet 1, you see a bowl 1.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 4
+On the cabinet 4, you see a glassbottle 1.
+> go to cabinet 5
+The cabinet 5 is closed.
+> open cabinet 5
+You open the cabinet 5. The cabinet 5 is open. In it, you see a dishsponge 2.
+> go to cabinet 4
+On the cabinet 4, you see a glassbottle 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #3: Success
+
+#####
+
+#####
+
+Environment #4: Success
+
+#####
+
+#####
+
+Environment #5: Success
+
+#####
+
+#####
+
+Environment #6:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> clean apple 3 with sinkbasin 1
+You clean the apple 3 using the sinkbasin 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a clean lettuce in diningtable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 3, a egg 2, a potato 3, and a potato 2.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a lettuce 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> take lettuce 1 from diningtable 1
+You pick up the lettuce 1 from the diningtable 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a apple 2, a ladle 2, a spoon 1, and a tomato 3.
+> clean lettuce 1 with sinkbasin 1
+You clean the lettuce 1 using the sinkbasin 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> put lettuce 1 in/on diningtable 1
+You put the lettuce 1 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some pan and put it in countertop.
+> go to shelf 1
+On the shelf 1, you see a mug 3.
+> go to cabinet 1
+On the cabinet 1, you see a plate 1, and a vase 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 1
+On the cabinet 1, you see a plate 1, and a vase 1.
+> take plate 1 from cabinet 1
+You pick up the plate 1 from the cabinet 1.
+> go to cabinet 3
+On the cabinet 3, you see a peppershaker 1, and a soapbottle 1.
+> go to microwave 1
+The microwave 1 is closed.
+> open microwave 1
+You open the microwave 1. The microwave 1 is open. In it, you see a potato 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see nothing.
+> put plate 1 in/on sinkbasin 1
+You put the plate 1 in/on the sinkbasin 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a plate 1.
+> go to cabinet 4
+On the cabinet 4, you see nothing.
+> go to cabinet 6
+The cabinet 6 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #7: Success
+
+#####
+
+#####
+
+Environment #8: Success
+
+#####
+
+#####
+
+Environment #9: Success
+
+#####
+
+#####
+
+Environment #10: Success
+
+#####
+
+#####
+
+Environment #11:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: find some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
+Your task is to: put some spraybottle on toilet.
+> go to cabinet 1
+On the cabinet 1, you see a cloth 1, a soapbar 1, a soapbottle 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a candle 1, and a spraybottle 2.
+> take spraybottle 2 from cabinet 2
+You pick up the spraybottle 2 from the cabinet 2.
+> go to toilet 1
+On the toilet 1, you see a soapbottle 2.
+> put spraybottle 2 in/on toilet 1
+You put the spraybottle 2 in/on the toilet 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, and a sofa 1.
+Your task is to: put a vase in safe.
+> go to shelf 10
+On the shelf 10, you see a vase 1.
+> take vase 1 from shelf 10
+You pick up the vase 1 from the shelf 10.
+> go to cabinet 3
+The cabinet 3 is closed.
+> open cabinet 3
+You open the cabinet 3. The cabinet 3 is open. In it, you see nothing.
+> go to drawer 1
+The drawer 1 is closed.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see a cellphone 1.
+> go to cabinet 4
+The cabinet 4 is closed.
+> go to cabinet 1
+The cabinet 1 is closed.
+> go to cabinet 4
+The cabinet 4 is closed.
+> go to cabinet 1
+The cabinet 1 is closed.
+> go to cabinet 3
+The cabinet 3 is open. In it, you see nothing.
+> go to armchair 1
+On the armchair 1, you see a pillow 1.
+> go to dresser 1
+On the dresser 1, you see a laptop 1, and a remotecontrol 1.
+> go to safe 1
+The safe 1 is closed.
+> go to drawer 1
+The drawer 1 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #12: Success
+
+#####
+
+#####
+
+Environment #13:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a cool mug in shelf.
+> go to countertop 1
+On the countertop 1, you see a knife 1, a pan 2, a pan 1, and a plate 1.
+> go to countertop 2
+On the countertop 2, you see a apple 2, a butterknife 2, a fork 3, a houseplant 1, a knife 2, a lettuce 3, a spatula 1, and a winebottle 1.
+> go to countertop 3
+On the countertop 3, you see a apple 1, a book 1, a bread 1, a butterknife 3, a glassbottle 2, a glassbottle 1, a knife 3, a lettuce 2, a lettuce 1, a papertowelroll 1, a plate 3, a spoon 1, a statue 1, and a vase 2.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> go to cabinet 1
+The cabinet 1 is closed.
+> open cabinet 1
+You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see nothing.
+> go to cabinet 3
+The cabinet 3 is closed.
+> open cabinet 3
+You open the cabinet 3. The cabinet 3 is open. In it, you see a pot 1.
+> go to cabinet 4
+On the cabinet 4, you see nothing.
+> go to cabinet 5
+The cabinet 5 is closed.
+> open cabinet 5
+You open the cabinet 5. The cabinet 5 is open. In it, you see nothing.
+> go to cabinet 6
+The cabinet 6 is closed.
+> open cabinet 6
+You open the cabinet 6. The cabinet 6 is open. In it, you see a mug 3.
+> take mug 3 from cabinet 6
+You pick up the mug 3 from the cabinet 6.
+> go to fridge 1
+The fridge 1 is closed.
+> cool mug 3 with fridge 1
+You cool the mug 3 using the fridge 1.
+> go to shelf 1
+On the shelf 1, you see a cup 2, a cup 1, a peppershaker 1, and a saltshaker 1.
+> put mug 3 in/on shelf 1
+You put the mug 3 in/on the shelf 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a safe 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: cool some pan and put it in stoveburner.
+>go to stoveburner 1
+On the stoveburner 1, you see nothing.
+>go to stoveburner 2
+On the stoveburner 2, you see a pot 1.
+> go to stoveburner 3
+On the stoveburner 3, you see a pan 1.
+> take pan 1 from stoveburner 3
+You pick up the pan 1 from the stoveburner 3.
+> go to fridge 1
+The fridge 1 is closed.
+> cool pan 1 with fridge 1
+You cool the pan 1 using the fridge 1.
+>go to stoveburner 1
+On the stoveburner 1, you see nothing.
+> put pan 1 in/on stoveburner 1
+You put the pan 1 in/on the stoveburner 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: cool some mug and put it in coffeemachine.
+> go to countertop 1
+On the countertop 1, you see a glassbottle 2, a mug 1, and a papertowelroll 1.
+> take mug 1 from countertop 1
+You pick up the mug 1 from the countertop 1.
+> go to fridge 1
+The fridge 1 is closed.
+> cool mug 1 with fridge 1
+You cool the mug 1 using the fridge 1.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> put mug 1 in/on coffeemachine 1
+You put the mug 1 in/on the coffeemachine 1.
+
+STATUS: OK
+
+#####
+
+#####
+
+Environment #14: Success
+
+#####
+
+#####
+
+Environment #15: Success
+
+#####
+
+#####
+
+Environment #16: Success
+
+#####
+
+#####
+
+Environment #17: Success
+
+#####
+
+#####
+
+Environment #18: Success
+
+#####
+
+#####
+
+Environment #19: Success
+
+#####
+
+#####
+
+Environment #20:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> clean apple 3 with sinkbasin 1
+You clean the apple 3 using the sinkbasin 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a clean lettuce in diningtable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 3, a egg 2, a potato 3, and a potato 2.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a lettuce 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> take lettuce 1 from diningtable 1
+You pick up the lettuce 1 from the diningtable 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a apple 2, a ladle 2, a spoon 1, and a tomato 3.
+> clean lettuce 1 with sinkbasin 1
+You clean the lettuce 1 using the sinkbasin 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> put lettuce 1 in/on diningtable 1
+You put the lettuce 1 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some knife and put it in countertop.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 3
+On the cabinet 3, you see nothing.
+> go to cabinet 4
+On the cabinet 4, you see a cup 1, and a peppershaker 1.
+> go to drawer 1
+The drawer 1 is closed.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 1
+On the cabinet 1, you see a pan 1.
+> take pan 1 from cabinet 1
+You pick up the pan 1 from the cabinet 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a soapbottle 1.
+> go to countertop 1
+On the countertop 1, you see a mug 2, a papertowelroll 1, a peppershaker 3, and a spatula 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a bowl 2, a egg 1, a potato 3, and a spoon 3.
+> go to cabinet 2
+The cabinet 2 is open. In it, you see a soapbottle 1.
+> go to cabinet 5
+The cabinet 5 is closed.
+> open cabinet 5
+You open the cabinet 5. The cabinet 5 is open. In it, you see nothing.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #21: Success
+
+#####
+
+#####
+
+Environment #22: Success
+
+#####
+
+#####
+
+Environment #23: Success
+
+#####
+
+#####
+
+Environment #24:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: find some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
+Your task is to: put some spraybottle on toilet.
+> go to cabinet 1
+On the cabinet 1, you see a cloth 1, a soapbar 1, a soapbottle 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a candle 1, and a spraybottle 2.
+> take spraybottle 2 from cabinet 2
+You pick up the spraybottle 2 from the cabinet 2.
+> go to toilet 1
+On the toilet 1, you see a soapbottle 2.
+> put spraybottle 2 in/on toilet 1
+You put the spraybottle 2 in/on the toilet 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put some peppershaker on drawer.
+> go to countertop 3
+On the countertop 3, you see a apple 1, a bread 1, a butterknife 2, a butterknife 1, a cup 2, a egg 2, a houseplant 1, a knife 3, a knife 2, a pan 2, a peppershaker 1, and a vase 3.
+> take peppershaker 1 from countertop 3
+You pick up the peppershaker 1 from the countertop 3.
+> go to cabinet 1
+On the cabinet 1, you see a vase 2.
+> go to drawer 3
+The drawer 3 is closed.
+> open drawer 3
+You open the drawer 3. The drawer 3 is open. In it, you see a saltshaker 1.
+> put peppershaker 1 in/on drawer 3
+You put the peppershaker 1 in/on the drawer 3.
+
+STATUS: OK
+
+#####
+
+#####
+
+Environment #25: Success
+
+#####
+
+#####
+
+Environment #26: Success
+
+#####
+
+#####
+
+Environment #27: Success
+
+#####
+
+#####
+
+Environment #28:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: find some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
+Your task is to: put some spraybottle on toilet.
+> go to cabinet 1
+On the cabinet 1, you see a cloth 1, a soapbar 1, a soapbottle 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a candle 1, and a spraybottle 2.
+> take spraybottle 2 from cabinet 2
+You pick up the spraybottle 2 from the cabinet 2.
+> go to toilet 1
+On the toilet 1, you see a soapbottle 2.
+> put spraybottle 2 in/on toilet 1
+You put the spraybottle 2 in/on the toilet 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put some saltshaker on cabinet.
+> go to countertop 1
+On the countertop 1, you see a mug 1, and a soapbottle 2.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a plate 1.
+> go to drawer 3
+The drawer 3 is closed.
+> go to cabinet 1
+On the cabinet 1, you see a glassbottle 2.
+> go to drawer 1
+The drawer 1 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a plate 1.
+> go to countertop 2
+On the countertop 2, you see a apple 2, a bowl 2, a bread 2, a bread 1, a creditcard 3, a creditcard 2, a fork 1, a knife 1, and a lettuce 1.
+> go to cabinet 4
+On the cabinet 4, you see a glassbottle 1, and a soapbottle 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to coffeemachine 1
+On the coffeemachine 1, you see a mug 1.
+> take mug 1 from coffeemachine 1
+You pick up the mug 1 from the coffeemachine 1.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 6
+The cabinet 6 is closed.
+> open cabinet 6
+You open the cabinet 6. The cabinet 6 is open. In it, you see a plate 2.
+> go to cabinet 2
+The cabinet 2 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #29: Success
+
+#####
+
+#####
+
+Environment #30:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: find some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
+Your task is to: put some spraybottle on toilet.
+> go to cabinet 1
+On the cabinet 1, you see a cloth 1, a soapbar 1, a soapbottle 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a candle 1, and a spraybottle 2.
+> take spraybottle 2 from cabinet 2
+You pick up the spraybottle 2 from the cabinet 2.
+> go to toilet 1
+On the toilet 1, you see a soapbottle 2.
+> put spraybottle 2 in/on toilet 1
+You put the spraybottle 2 in/on the toilet 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, and a sofa 1.
+Your task is to: put some watch on safe.
+> go to dresser 1
+On the dresser 1, you see a box 1, a cellphone 2, a cellphone 1, a keychain 1, a laptop 1, a newspaper 1, and a watch 3.
+> take watch 3 from dresser 1
+You pick up the watch 3 from the dresser 1.
+> go to armchair 1
+On the armchair 1, you see a box 3, a pillow 1, and a remotecontrol 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 4
+The cabinet 4 is closed.
+> go to armchair 1
+On the armchair 1, you see a box 3, a pillow 1, and a remotecontrol 1.
+> go to sidetable 1
+On the sidetable 1, you see a tissuebox 1, and a vase 1.
+> go to armchair 1
+On the armchair 1, you see a box 3, a pillow 1, and a remotecontrol 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to armchair 1
+On the armchair 1, you see a box 3, a pillow 1, and a remotecontrol 1.
+> go to safe 1
+The safe 1 is closed.
+> go to drawer 1
+The drawer 1 is closed.
+> go to safe 1
+The safe 1 is closed.
+> open safe 1
+You open the safe 1. The safe 1 is open. In it, you see a vase 3, and a vase 2.
+> put watch 3 in/on safe 1
+You put the watch 3 in/on the safe 1.
+
+STATUS: OK
+
+#####
+
+#####
+
+Environment #31: Success
+
+#####
+
+#####
+
+Environment #32:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a hot apple in fridge.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 1, and a egg 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a fork 3, a fork 2, a fork 1, a mug 2, a peppershaker 3, a plate 2, a pot 1, a soapbottle 3, a spatula 1, a spoon 3, a spoon 2, a spoon 1, a winebottle 3, and a winebottle 2.
+> take apple 1 from diningtable 1
+You pick up the apple 1 from the diningtable 1.
+> go to microwave 1
+The microwave 1 is closed.
+> heat apple 1 with microwave 1
+You heat the apple 1 using the microwave 1.
+> go to fridge 1
+The fridge 1 is open. In it, you see a cup 1, and a egg 1.
+> put apple 1 in/on fridge 1
+You put the apple 1 in/on the fridge 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: heat some egg and put it in diningtable.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, and a potato 3.
+> go to countertop 1
+On the countertop 1, you see a bread 1, a fork 1, and a saltshaker 1.
+> go to countertop 2
+On the countertop 2, you see nothing.
+> go to countertop 3
+On the countertop 3, you see a bowl 1, a butterknife 1, a egg 2, a kettle 2, a plate 1, a sink 1, and a spatula 2.
+> take egg 2 from countertop 3
+You pick up the egg 2 from the countertop 3.
+> go to microwave 1
+The microwave 1 is closed.
+> heat egg 2 with microwave 1
+You heat the egg 2 using the microwave 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 2, a bread 3, a egg 1, a kettle 1, a knife 1, a mug 1, a papertowelroll 1, a peppershaker 2, a potato 1, a soapbottle 1, and a spatula 1.
+> put egg 2 in/on diningtable 1
+You put the egg 2 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: heat some apple and put it in garbagecan.
+> go to countertop 1
+On the countertop 1, you see a cellphone 1, a mug 2, a pan 2, and a tomato 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a plate 1.
+> go to coffeemachine 1
+On the coffeemachine 1, you see a mug 2.
+> go to cabinet 1
+On the cabinet 1, you see a glassbottle 1, and a soapbottle 1.
+> go to cabinet 4
+On the cabinet 4, you see a mug 1, and a soapbottle 2.
+> go to cabinet 2
+The cabinet 2 is open. In it, you see a plate 1.
+> go to cabinet 4
+On the cabinet 4, you see a mug 1, and a soapbottle 2.
+> take mug 1 from cabinet 4
+You pick up the mug 1 from the cabinet 4.
+> go to cabinet 2
+The cabinet 2 is open. In it, you see a plate 1.
+> go to cabinet 6
+The cabinet 6 is closed.
+> open cabinet 6
+You open the cabinet 6. The cabinet 6 is open. In it, you see nothing.
+> go to countertop 3
+On the countertop 3, you see a bread 2, a butterknife 2, a butterknife 1, a egg 1, a glassbottle 3, a houseplant 1, a knife 1, a peppershaker 3, a pot 1, a spoon 1, a statue 1, and a vase 3.
+> go to cabinet 6
+The cabinet 6 is open. In it, you see nothing.
+> go to cabinet 3
+On the cabinet 3, you see a saltshaker 1, and a vase 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 1, a mug 2, a pan 2, and a tomato 1.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #33: Success
+
+#####
+
+#####
+
+Environment #34: Success
+
+#####
+
+#####
+
+Environment #35: Success
+
+#####
+
+#####
+
+Environment #36: Success
+
+#####
+
+#####
+
+Environment #37:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> clean apple 3 with sinkbasin 1
+You clean the apple 3 using the sinkbasin 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a clean lettuce in diningtable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 3, a egg 2, a potato 3, and a potato 2.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a lettuce 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> take lettuce 1 from diningtable 1
+You pick up the lettuce 1 from the diningtable 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a apple 2, a ladle 2, a spoon 1, and a tomato 3.
+> clean lettuce 1 with sinkbasin 1
+You clean the lettuce 1 using the sinkbasin 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> put lettuce 1 in/on diningtable 1
+You put the lettuce 1 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a clean knife in countertop.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a vase 1.
+> go to cabinet 1
+On the cabinet 1, you see nothing.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> go to cabinet 4
+On the cabinet 4, you see a saltshaker 1.
+> go to drawer 1
+The drawer 1 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> go to cabinet 1
+On the cabinet 1, you see nothing.
+> go to cabinet 3
+On the cabinet 3, you see a vase 1.
+> go to drawer 3
+The drawer 3 is closed.
+> go to cabinet 1
+On the cabinet 1, you see nothing.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a peppershaker 1.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #38: Success
+
+#####
+
+#####
+
+Environment #39: Success
+
+#####
+
+#####
+
+Environment #40: Success
+
+#####
+
+#####
+
+Environment #41: Success
+
+#####
+
+#####
+
+Environment #42:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, and a sofa 1.
+Your task is to: put two keychain in safe.
+> go to dresser 1
+On the dresser 1, you see a box 1, a creditcard 1, a keychain 2, a keychain 1, a laptop 1, a statue 1, and a tissuebox 2.
+> take keychain 1 from dresser 1
+You pick up the keychain 1 from the dresser 1.
+> go to drawer 1
+The drawer 1 is closed.
+> go to cabinet 1
+The cabinet 1 is closed.
+> go to armchair 1
+On the armchair 1, you see a cellphone 1, a pillow 2, a pillow 1, and a remotecontrol 2.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to drawer 1
+The drawer 1 is closed.
+> go to cabinet 3
+The cabinet 3 is closed.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to drawer 3
+The drawer 3 is closed.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see nothing.
+> go to safe 1
+The safe 1 is closed.
+> open safe 1
+You open the safe 1. The safe 1 is open. In it, you see a statue 2, and a watch 3.
+> put keychain 1 in/on safe 1
+You put the keychain 1 in/on the safe 1.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #43:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put two peppershaker in drawer.
+> go to cabinet 1
+On the cabinet 1, you see a mug 2, and a peppershaker 2.
+> take peppershaker 2 from cabinet 1
+You pick up the peppershaker 2 from the cabinet 1.
+> go to cabinet 3
+On the cabinet 3, you see a glassbottle 1, and a soapbottle 1.
+> go to cabinet 4
+On the cabinet 4, you see a vase 1.
+> go to cabinet 3
+On the cabinet 3, you see a glassbottle 1, and a soapbottle 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a cellphone 1, and a fork 1.
+> put peppershaker 2 in/on drawer 1
+You put the peppershaker 2 in/on the drawer 1.
+> go to cabinet 1
+On the cabinet 1, you see a mug 2.
+> go to cabinet 4
+On the cabinet 4, you see a vase 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 4
+On the cabinet 4, you see a vase 1.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a glassbottle 1, and a soapbottle 1.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #44: Success
+
+#####
+
+#####
+
+Environment #45: Success
+
+#####
+
+#####
+
+Environment #46: Success
+
+#####
+
+#####
+
+Environment #47:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put two peppershaker in drawer.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a plate 1.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 4
+On the cabinet 4, you see a glassbottle 1.
+> go to shelf 1
+On the shelf 1, you see a statue 1.
+> go to cabinet 3
+On the cabinet 3, you see a plate 1.
+> go to cabinet 4
+On the cabinet 4, you see a glassbottle 1.
+> take glassbottle 1 from cabinet 4
+You pick up the glassbottle 1 from the cabinet 4.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a soapbottle 1.
+> go to cabinet 4
+On the cabinet 4, you see nothing.
+> go to shelf 3
+On the shelf 3, you see nothing.
+> go to shelf 2
+On the shelf 2, you see nothing.
+> go to countertop 3
+On the countertop 3, you see a butterknife 2, a creditcard 3, a dishsponge 3, a houseplant 1, a knife 2, a lettuce 1, a peppershaker 2, a spatula 3, a vase 3, a vase 2, and a vase 1.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #48: Success
+
+#####
+
+#####
+
+Environment #49:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a hot apple in fridge.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 1, and a egg 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a fork 3, a fork 2, a fork 1, a mug 2, a peppershaker 3, a plate 2, a pot 1, a soapbottle 3, a spatula 1, a spoon 3, a spoon 2, a spoon 1, a winebottle 3, and a winebottle 2.
+> take apple 1 from diningtable 1
+You pick up the apple 1 from the diningtable 1.
+> go to microwave 1
+The microwave 1 is closed.
+> heat apple 1 with microwave 1
+You heat the apple 1 using the microwave 1.
+> go to fridge 1
+The fridge 1 is open. In it, you see a cup 1, and a egg 1.
+> put apple 1 in/on fridge 1
+You put the apple 1 in/on the fridge 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: heat some egg and put it in diningtable.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, and a potato 3.
+> go to countertop 1
+On the countertop 1, you see a bread 1, a fork 1, and a saltshaker 1.
+> go to countertop 2
+On the countertop 2, you see nothing.
+> go to countertop 3
+On the countertop 3, you see a bowl 1, a butterknife 1, a egg 2, a kettle 2, a plate 1, a sink 1, and a spatula 2.
+> take egg 2 from countertop 3
+You pick up the egg 2 from the countertop 3.
+> go to microwave 1
+The microwave 1 is closed.
+> heat egg 2 with microwave 1
+You heat the egg 2 using the microwave 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 2, a bread 3, a egg 1, a kettle 1, a knife 1, a mug 1, a papertowelroll 1, a peppershaker 2, a potato 1, a soapbottle 1, and a spatula 1.
+> put egg 2 in/on diningtable 1
+You put the egg 2 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: heat some egg and put it in garbagecan.
+> go to cabinet 4
+On the cabinet 4, you see a saltshaker 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 3, a pan 1, and a peppershaker 2.
+> go to cabinet 1
+On the cabinet 1, you see a plate 1.
+> go to countertop 2
+On the countertop 2, you see a bread 1, a cellphone 1, a creditcard 2, a creditcard 1, a lettuce 1, a mug 1, a spoon 1, and a statue 1.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 1
+On the cabinet 1, you see a plate 1.
+> take plate 1 from cabinet 1
+You pick up the plate 1 from the cabinet 1.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 4
+On the cabinet 4, you see a saltshaker 1.
+> go to countertop 3
+On the countertop 3, you see a butterknife 1, a fork 1, a glassbottle 3, a houseplant 1, a knife 1, a lettuce 3, a saltshaker 3, a soapbottle 1, a spoon 2, and a tomato 1.
+> go to cabinet 1
+On the cabinet 1, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 3, a pan 1, and a peppershaker 2.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #50:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a cool mug in shelf.
+> go to countertop 1
+On the countertop 1, you see a knife 1, a pan 2, a pan 1, and a plate 1.
+> go to countertop 2
+On the countertop 2, you see a apple 2, a butterknife 2, a fork 3, a houseplant 1, a knife 2, a lettuce 3, a spatula 1, and a winebottle 1.
+> go to countertop 3
+On the countertop 3, you see a apple 1, a book 1, a bread 1, a butterknife 3, a glassbottle 2, a glassbottle 1, a knife 3, a lettuce 2, a lettuce 1, a papertowelroll 1, a plate 3, a spoon 1, a statue 1, and a vase 2.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> go to cabinet 1
+The cabinet 1 is closed.
+> open cabinet 1
+You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see nothing.
+> go to cabinet 3
+The cabinet 3 is closed.
+> open cabinet 3
+You open the cabinet 3. The cabinet 3 is open. In it, you see a pot 1.
+> go to cabinet 4
+On the cabinet 4, you see nothing.
+> go to cabinet 5
+The cabinet 5 is closed.
+> open cabinet 5
+You open the cabinet 5. The cabinet 5 is open. In it, you see nothing.
+> go to cabinet 6
+The cabinet 6 is closed.
+> open cabinet 6
+You open the cabinet 6. The cabinet 6 is open. In it, you see a mug 3.
+> take mug 3 from cabinet 6
+You pick up the mug 3 from the cabinet 6.
+> go to fridge 1
+The fridge 1 is closed.
+> cool mug 3 with fridge 1
+You cool the mug 3 using the fridge 1.
+> go to shelf 1
+On the shelf 1, you see a cup 2, a cup 1, a peppershaker 1, and a saltshaker 1.
+> put mug 3 in/on shelf 1
+You put the mug 3 in/on the shelf 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a safe 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: cool some pan and put it in stoveburner.
+>go to stoveburner 1
+On the stoveburner 1, you see nothing.
+>go to stoveburner 2
+On the stoveburner 2, you see a pot 1.
+> go to stoveburner 3
+On the stoveburner 3, you see a pan 1.
+> take pan 1 from stoveburner 3
+You pick up the pan 1 from the stoveburner 3.
+> go to fridge 1
+The fridge 1 is closed.
+> cool pan 1 with fridge 1
+You cool the pan 1 using the fridge 1.
+>go to stoveburner 1
+On the stoveburner 1, you see nothing.
+> put pan 1 in/on stoveburner 1
+You put the pan 1 in/on the stoveburner 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: cool some potato and put it in microwave.
+> go to cabinet 3
+On the cabinet 3, you see nothing.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 1
+On the cabinet 1, you see a plate 1, and a soapbottle 2.
+> go to cabinet 3
+On the cabinet 3, you see nothing.
+> go to coffeemachine 1
+On the coffeemachine 1, you see a mug 1.
+> go to cabinet 4
+On the cabinet 4, you see a vase 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a mug 1, and a tomato 2.
+> go to cabinet 3
+On the cabinet 3, you see nothing.
+> go to countertop 2
+On the countertop 2, you see a apple 1, a creditcard 2, a creditcard 1, a fork 1, a glassbottle 1, a lettuce 2, a papertowelroll 1, a potato 1, a soapbottle 1, a spatula 2, and a spoon 1.
+> take potato 1 from countertop 2
+You pick up the potato 1 from the countertop 2.
+> go to fridge 1
+The fridge 1 is closed.
+> cool potato 1 with fridge 1
+You cool the potato 1 using the fridge 1.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 1
+On the cabinet 1, you see a plate 1, and a soapbottle 2.
+> go to cabinet 3
+On the cabinet 3, you see nothing.
+> go to cabinet 2
+The cabinet 2 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #51: Success
+
+#####
+
+#####
+
+Environment #52: Success
+
+#####
+
+#####
+
+Environment #53:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
+Your task is to: find two soapbar and put them in cabinet.
+> go to countertop 1
+On the countertop 1, you see a soapbar 2, a soapbar 1, a soapbottle 2, a soapbottle 1, a spraybottle 2, a spraybottle 1, and a toiletpaper 2.
+> take soapbar 1 from countertop 1
+You pick up the soapbar 1 from the countertop 1.
+> go to cabinet 1
+The cabinet 1 is closed.
+> go to garbagecan 1
+On the garbagecan 1, you see a toiletpaper 1.
+> go to cabinet 3
+The cabinet 3 is closed.
+> open cabinet 3
+You open the cabinet 3. The cabinet 3 is open. In it, you see a cloth 3.
+> go to cabinet 4
+The cabinet 4 is closed.
+> open cabinet 4
+You open the cabinet 4. The cabinet 4 is open. In it, you see a cloth 2.
+> go to cabinet 1
+The cabinet 1 is closed.
+> open cabinet 1
+You open the cabinet 1. The cabinet 1 is open. In it, you see a cloth 1.
+> put soapbar 1 in/on cabinet 1
+You put the soapbar 1 in/on the cabinet 1.
+> go to countertop 1
+On the countertop 1, you see a soapbar 2, a soapbottle 2, a soapbottle 1, a spraybottle 2, a spraybottle 1, and a toiletpaper 2.
+> take soapbar 2 from countertop 1
+You pick up the soapbar 2 from the countertop 1.
+> go to cabinet 1
+The cabinet 1 is open. In it, you see a cloth 1, and a soapbar 1.
+> go to cabinet 4
+The cabinet 4 is open. In it, you see a cloth 2.
+> put soapbar 2 in/on cabinet 4
+You put the soapbar 2 in/on the cabinet 4.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #54:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a hot apple in fridge.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 1, and a egg 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a fork 3, a fork 2, a fork 1, a mug 2, a peppershaker 3, a plate 2, a pot 1, a soapbottle 3, a spatula 1, a spoon 3, a spoon 2, a spoon 1, a winebottle 3, and a winebottle 2.
+> take apple 1 from diningtable 1
+You pick up the apple 1 from the diningtable 1.
+> go to microwave 1
+The microwave 1 is closed.
+> heat apple 1 with microwave 1
+You heat the apple 1 using the microwave 1.
+> go to fridge 1
+The fridge 1 is open. In it, you see a cup 1, and a egg 1.
+> put apple 1 in/on fridge 1
+You put the apple 1 in/on the fridge 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: heat some egg and put it in diningtable.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, and a potato 3.
+> go to countertop 1
+On the countertop 1, you see a bread 1, a fork 1, and a saltshaker 1.
+> go to countertop 2
+On the countertop 2, you see nothing.
+> go to countertop 3
+On the countertop 3, you see a bowl 1, a butterknife 1, a egg 2, a kettle 2, a plate 1, a sink 1, and a spatula 2.
+> take egg 2 from countertop 3
+You pick up the egg 2 from the countertop 3.
+> go to microwave 1
+The microwave 1 is closed.
+> heat egg 2 with microwave 1
+You heat the egg 2 using the microwave 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 2, a bread 3, a egg 1, a kettle 1, a knife 1, a mug 1, a papertowelroll 1, a peppershaker 2, a potato 1, a soapbottle 1, and a spatula 1.
+> put egg 2 in/on diningtable 1
+You put the egg 2 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: heat some apple and put it in fridge.
+> go to fridge 1
+The fridge 1 is closed.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 1
+On the cabinet 1, you see a glassbottle 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 1, a creditcard 3, a creditcard 1, and a pan 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 4
+On the cabinet 4, you see nothing.
+> go to cabinet 3
+On the cabinet 3, you see a plate 2.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to countertop 3
+On the countertop 3, you see a bowl 2, a bowl 1, a butterknife 1, a cellphone 3, a cellphone 2, a cup 1, a houseplant 1, a knife 3, a plate 3, a soapbottle 2, a spatula 1, a spoon 1, a vase 3, and a vase 2.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a plate 2.
+> go to cabinet 5
+The cabinet 5 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #55: Success
+
+#####
+
+#####
+
+Environment #56: Success
+
+#####
+
+#####
+
+Environment #57: Success
+
+#####
+
+#####
+
+Environment #58: Success
+
+#####
+
+#####
+
+Environment #59: Success
+
+#####
+
+#####
+
+Environment #60: Success
+
+#####
+
+#####
+
+Environment #61:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a cool mug in shelf.
+> go to countertop 1
+On the countertop 1, you see a knife 1, a pan 2, a pan 1, and a plate 1.
+> go to countertop 2
+On the countertop 2, you see a apple 2, a butterknife 2, a fork 3, a houseplant 1, a knife 2, a lettuce 3, a spatula 1, and a winebottle 1.
+> go to countertop 3
+On the countertop 3, you see a apple 1, a book 1, a bread 1, a butterknife 3, a glassbottle 2, a glassbottle 1, a knife 3, a lettuce 2, a lettuce 1, a papertowelroll 1, a plate 3, a spoon 1, a statue 1, and a vase 2.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> go to cabinet 1
+The cabinet 1 is closed.
+> open cabinet 1
+You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see nothing.
+> go to cabinet 3
+The cabinet 3 is closed.
+> open cabinet 3
+You open the cabinet 3. The cabinet 3 is open. In it, you see a pot 1.
+> go to cabinet 4
+On the cabinet 4, you see nothing.
+> go to cabinet 5
+The cabinet 5 is closed.
+> open cabinet 5
+You open the cabinet 5. The cabinet 5 is open. In it, you see nothing.
+> go to cabinet 6
+The cabinet 6 is closed.
+> open cabinet 6
+You open the cabinet 6. The cabinet 6 is open. In it, you see a mug 3.
+> take mug 3 from cabinet 6
+You pick up the mug 3 from the cabinet 6.
+> go to fridge 1
+The fridge 1 is closed.
+> cool mug 3 with fridge 1
+You cool the mug 3 using the fridge 1.
+> go to shelf 1
+On the shelf 1, you see a cup 2, a cup 1, a peppershaker 1, and a saltshaker 1.
+> put mug 3 in/on shelf 1
+You put the mug 3 in/on the shelf 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a safe 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: cool some pan and put it in stoveburner.
+>go to stoveburner 1
+On the stoveburner 1, you see nothing.
+>go to stoveburner 2
+On the stoveburner 2, you see a pot 1.
+> go to stoveburner 3
+On the stoveburner 3, you see a pan 1.
+> take pan 1 from stoveburner 3
+You pick up the pan 1 from the stoveburner 3.
+> go to fridge 1
+The fridge 1 is closed.
+> cool pan 1 with fridge 1
+You cool the pan 1 using the fridge 1.
+>go to stoveburner 1
+On the stoveburner 1, you see nothing.
+> put pan 1 in/on stoveburner 1
+You put the pan 1 in/on the stoveburner 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: cool some potato and put it in microwave.
+> go to countertop 1
+On the countertop 1, you see a fork 2, and a mug 2.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to coffeemachine 1
+On the coffeemachine 1, you see a mug 2.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 4
+On the cabinet 4, you see nothing.
+> go to cabinet 3
+On the cabinet 3, you see nothing.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a apple 2, a apple 1, a bowl 3, a bowl 2, a egg 2, a lettuce 1, and a tomato 1.
+> take bowl 2 from fridge 1
+You pick up the bowl 2 from the fridge 1.
+> go to countertop 3
+On the countertop 3, you see a bread 1, a butterknife 2, a dishsponge 1, a glassbottle 2, a houseplant 1, a knife 3, a knife 2, a knife 1, a pan 1, and a soapbottle 3.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 3
+On the cabinet 3, you see nothing.
+> go to drawer 3
+The drawer 3 is closed.
+> open drawer 3
+You open the drawer 3. The drawer 3 is open. In it, you see a cellphone 2.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 5
+The cabinet 5 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #62: Success
+
+#####
+
+#####
+
+Environment #63: Success
+
+#####
+
+#####
+
+Environment #64: Success
+
+#####
+
+#####
+
+Environment #65:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> clean apple 3 with sinkbasin 1
+You clean the apple 3 using the sinkbasin 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a clean lettuce in diningtable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 3, a egg 2, a potato 3, and a potato 2.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a lettuce 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> take lettuce 1 from diningtable 1
+You pick up the lettuce 1 from the diningtable 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a apple 2, a ladle 2, a spoon 1, and a tomato 3.
+> clean lettuce 1 with sinkbasin 1
+You clean the lettuce 1 using the sinkbasin 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> put lettuce 1 in/on diningtable 1
+You put the lettuce 1 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
+Your task is to: clean some soapbar and put it in cabinet.
+> go to countertop 1
+On the countertop 1, you see a candle 3, a candle 1, a soapbottle 1, a spraybottle 2, and a toiletpaper 2.
+> take soapbottle 1 from countertop 1
+You pick up the soapbottle 1 from the countertop 1.
+> go to cabinet 4
+The cabinet 4 is closed.
+> open cabinet 4
+You open the cabinet 4. The cabinet 4 is open. In it, you see a candle 2, and a soapbottle 3.
+> go to cabinet 1
+The cabinet 1 is closed.
+> go to cabinet 4
+The cabinet 4 is open. In it, you see a candle 2, and a soapbottle 3.
+> go to handtowelholder 1
+On the handtowelholder 1, you see a handtowel 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see nothing.
+> go to garbagecan 1
+On the garbagecan 1, you see a spraybottle 1.
+> go to countertop 1
+On the countertop 1, you see a candle 3, a candle 1, a spraybottle 2, and a toiletpaper 2.
+> go to cabinet 4
+The cabinet 4 is open. In it, you see a candle 2, and a soapbottle 3.
+> go to handtowelholder 2
+On the handtowelholder 2, you see a handtowel 2.
+> go to countertop 1
+On the countertop 1, you see a candle 3, a candle 1, a spraybottle 2, and a toiletpaper 2.
+> go to cabinet 1
+The cabinet 1 is closed.
+> go to countertop 1
+On the countertop 1, you see a candle 3, a candle 1, a spraybottle 2, and a toiletpaper 2.
+> go to cabinet 3
+The cabinet 3 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #66:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a hot apple in fridge.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 1, and a egg 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a fork 3, a fork 2, a fork 1, a mug 2, a peppershaker 3, a plate 2, a pot 1, a soapbottle 3, a spatula 1, a spoon 3, a spoon 2, a spoon 1, a winebottle 3, and a winebottle 2.
+> take apple 1 from diningtable 1
+You pick up the apple 1 from the diningtable 1.
+> go to microwave 1
+The microwave 1 is closed.
+> heat apple 1 with microwave 1
+You heat the apple 1 using the microwave 1.
+> go to fridge 1
+The fridge 1 is open. In it, you see a cup 1, and a egg 1.
+> put apple 1 in/on fridge 1
+You put the apple 1 in/on the fridge 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: heat some egg and put it in diningtable.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, and a potato 3.
+> go to countertop 1
+On the countertop 1, you see a bread 1, a fork 1, and a saltshaker 1.
+> go to countertop 2
+On the countertop 2, you see nothing.
+> go to countertop 3
+On the countertop 3, you see a bowl 1, a butterknife 1, a egg 2, a kettle 2, a plate 1, a sink 1, and a spatula 2.
+> take egg 2 from countertop 3
+You pick up the egg 2 from the countertop 3.
+> go to microwave 1
+The microwave 1 is closed.
+> heat egg 2 with microwave 1
+You heat the egg 2 using the microwave 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 2, a bread 3, a egg 1, a kettle 1, a knife 1, a mug 1, a papertowelroll 1, a peppershaker 2, a potato 1, a soapbottle 1, and a spatula 1.
+> put egg 2 in/on diningtable 1
+You put the egg 2 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: heat some apple and put it in fridge.
+> go to cabinet 3
+On the cabinet 3, you see a peppershaker 1, and a plate 2.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a plate 1, and a saltshaker 1.
+> take plate 1 from cabinet 2
+You pick up the plate 1 from the cabinet 2.
+> go to cabinet 1
+On the cabinet 1, you see a bowl 2, and a soapbottle 1.
+> go to countertop 1
+On the countertop 1, you see a pan 1, and a papertowelroll 1.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 4
+On the cabinet 4, you see a bowl 1.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a peppershaker 1, and a plate 2.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a peppershaker 1, and a plate 2.
+> go to cabinet 6
+The cabinet 6 is closed.
+> open cabinet 6
+You open the cabinet 6. The cabinet 6 is open. In it, you see a glassbottle 1.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> go to fridge 1
+The fridge 1 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #67: Success
+
+#####
+
+#####
+
+Environment #68: Success
+
+#####
+
+#####
+
+Environment #69:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a bed 1, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.
+Your task is to: examine the pen with the desklamp.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see nothing.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to drawer 3
+The drawer 3 is closed.
+> open drawer 3
+You open the drawer 3. The drawer 3 is open. In it, you see nothing.
+> go to drawer 4
+The drawer 4 is closed.
+> open drawer 4
+You open the drawer 4. The drawer 4 is open. In it, you see a cd 3, a keychain 1, and a pen 2.
+> take pen 2 from drawer 4
+You pick up the pen 2 from the drawer 4.
+> go to dresser 1
+On the dresser 1, you see a alarmclock 2, a alarmclock 1, a book 1, a cd 1, a creditcard 1, a desklamp 1, a keychain 2, a pen 3, and a pen 1.
+> use desklamp 1
+You turn on the desklamp 1.
+You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a safe 1, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 2, and a sidetable 1.
+Your task is to: look at bowl under the desklamp.
+OK. 
+> go to drawer 1
+On the drawer 1, you see nothing.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to drawer 3
+The drawer 3 is closed.
+> open drawer 3
+You open the drawer 3. The drawer 3 is open. In it, you see nothing.
+> go to desk 1
+On the desk 1, you see a alarmclock 2, a book 1, a cellphone 1, a keychain 1, a laptop 2, a laptop 1, and a pen 3.
+> go to sidetable 1
+On the sidetable 1, you see a cd 1, a pen 1, and a pencil 1.
+> go to shelf 1
+On the shelf 1, you see nothing.
+> go to shelf 2
+On the shelf 2, you see a bowl 1.
+> take bowl 1 from shelf 2
+You pick up the bowl 1 from the shelf 2.
+> go to desk 1
+On the desk 1, you see a alarmclock 2, a book 1, a cellphone 1, a keychain 1, a laptop 2, a laptop 1, and a pen 3.
+> go to sidetable 1
+On the sidetable 1, you see a cd 1, a pen 1, and a pencil 1.
+> go to sidetable 2
+On the sidetable 2, you see a alarmclock 1, a desklamp 1, and a pen 2.
+> use desklamp 1
+You turn on the desklamp 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.
+Your task is to: look at bowl under the desklamp.
+> go to desk 2
+On the desk 2, you see a bowl 2, a bowl 1, a cd 2, a cd 1, and a creditcard 3.
+> take bowl 1 from desk 2
+You pick up the bowl 1 from the desk 2.
+> go to desk 1
+On the desk 1, you see a alarmclock 1, a desklamp 1, a mug 1, and a pencil 1.
+> use desklamp 1
+You turn on the desklamp 1.
+
+STATUS: OK
+
+#####
+
+#####
+
+Environment #70: Success
+
+#####
+
+#####
+
+Environment #71: Success
+
+#####
+
+#####
+
+Environment #72:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a cool mug in shelf.
+> go to countertop 1
+On the countertop 1, you see a knife 1, a pan 2, a pan 1, and a plate 1.
+> go to countertop 2
+On the countertop 2, you see a apple 2, a butterknife 2, a fork 3, a houseplant 1, a knife 2, a lettuce 3, a spatula 1, and a winebottle 1.
+> go to countertop 3
+On the countertop 3, you see a apple 1, a book 1, a bread 1, a butterknife 3, a glassbottle 2, a glassbottle 1, a knife 3, a lettuce 2, a lettuce 1, a papertowelroll 1, a plate 3, a spoon 1, a statue 1, and a vase 2.
+> go to coffeemachine 1
+On the coffeemachine 1, you see nothing.
+> go to cabinet 1
+The cabinet 1 is closed.
+> open cabinet 1
+You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see nothing.
+> go to cabinet 3
+The cabinet 3 is closed.
+> open cabinet 3
+You open the cabinet 3. The cabinet 3 is open. In it, you see a pot 1.
+> go to cabinet 4
+On the cabinet 4, you see nothing.
+> go to cabinet 5
+The cabinet 5 is closed.
+> open cabinet 5
+You open the cabinet 5. The cabinet 5 is open. In it, you see nothing.
+> go to cabinet 6
+The cabinet 6 is closed.
+> open cabinet 6
+You open the cabinet 6. The cabinet 6 is open. In it, you see a mug 3.
+> take mug 3 from cabinet 6
+You pick up the mug 3 from the cabinet 6.
+> go to fridge 1
+The fridge 1 is closed.
+> cool mug 3 with fridge 1
+You cool the mug 3 using the fridge 1.
+> go to shelf 1
+On the shelf 1, you see a cup 2, a cup 1, a peppershaker 1, and a saltshaker 1.
+> put mug 3 in/on shelf 1
+You put the mug 3 in/on the shelf 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a safe 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: cool some pan and put it in stoveburner.
+>go to stoveburner 1
+On the stoveburner 1, you see nothing.
+>go to stoveburner 2
+On the stoveburner 2, you see a pot 1.
+> go to stoveburner 3
+On the stoveburner 3, you see a pan 1.
+> take pan 1 from stoveburner 3
+You pick up the pan 1 from the stoveburner 3.
+> go to fridge 1
+The fridge 1 is closed.
+> cool pan 1 with fridge 1
+You cool the pan 1 using the fridge 1.
+>go to stoveburner 1
+On the stoveburner 1, you see nothing.
+> put pan 1 in/on stoveburner 1
+You put the pan 1 in/on the stoveburner 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a cool tomato in microwave.
+> go to shelf 1
+On the shelf 1, you see a creditcard 1, and a dishsponge 2.
+> go to shelf 2
+On the shelf 2, you see a papertowelroll 1, and a vase 3.
+> go to shelf 3
+On the shelf 3, you see nothing.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 4
+On the cabinet 4, you see a cup 1, and a vase 2.
+> go to cabinet 1
+On the cabinet 1, you see a dishsponge 1.
+> go to countertop 3
+On the countertop 3, you see a bread 1, a butterknife 3, a creditcard 2, a houseplant 1, a knife 3, a knife 2, a mug 2, a peppershaker 2, and a spatula 2.
+> go to cabinet 1
+On the cabinet 1, you see a dishsponge 1.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 3
+On the cabinet 3, you see nothing.
+> go to fridge 1
+The fridge 1 is closed.
+> go to cabinet 4
+On the cabinet 4, you see a cup 1, and a vase 2.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 1
+On the cabinet 1, you see a dishsponge 1.
+> take dishsponge 1 from cabinet 1
+You pick up the dishsponge 1 from the cabinet 1.
+> go to countertop 1
+On the countertop 1, you see a mug 1, and a saltshaker 1.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #73: Success
+
+#####
+
+#####
+
+Environment #74:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> clean apple 3 with sinkbasin 1
+You clean the apple 3 using the sinkbasin 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a clean lettuce in diningtable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 3, a egg 2, a potato 3, and a potato 2.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a lettuce 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> take lettuce 1 from diningtable 1
+You pick up the lettuce 1 from the diningtable 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a apple 2, a ladle 2, a spoon 1, and a tomato 3.
+> clean lettuce 1 with sinkbasin 1
+You clean the lettuce 1 using the sinkbasin 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> put lettuce 1 in/on diningtable 1
+You put the lettuce 1 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some egg and put it in microwave.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a plate 2, and a spatula 1.
+> take plate 2 from sinkbasin 1
+You pick up the plate 2 from the sinkbasin 1.
+> go to countertop 1
+On the countertop 1, you see a bowl 2, a egg 3, a fork 1, a glassbottle 1, and a mug 2.
+> go to cabinet 3
+On the cabinet 3, you see a cup 1.
+> go to cabinet 2
+The cabinet 2 is open. In it, you see a soapbottle 1.
+> go to cabinet 3
+On the cabinet 3, you see a cup 1.
+> go to cabinet 2
+The cabinet 2 is open. In it, you see a soapbottle 1.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 2
+The cabinet 2 is open. In it, you see a soapbottle 1.
+> go to cabinet 4
+On the cabinet 4, you see nothing.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a cup 1.
+> go to coffeemachine 1
+On the coffeemachine 1, you see a mug 2.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #75: Success
+
+#####
+
+#####
+
+Environment #76: Success
+
+#####
+
+#####
+
+Environment #77: Success
+
+#####
+
+#####
+
+Environment #78: Success
+
+#####
+
+#####
+
+Environment #79: Success
+
+#####
+
+#####
+
+Environment #80: Success
+
+#####
+
+#####
+
+Environment #81:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: find some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
+Your task is to: put some spraybottle on toilet.
+> go to cabinet 1
+On the cabinet 1, you see a cloth 1, a soapbar 1, a soapbottle 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a candle 1, and a spraybottle 2.
+> take spraybottle 2 from cabinet 2
+You pick up the spraybottle 2 from the cabinet 2.
+> go to toilet 1
+On the toilet 1, you see a soapbottle 2.
+> put spraybottle 2 in/on toilet 1
+You put the spraybottle 2 in/on the toilet 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, and a sofa 1.
+Your task is to: put some watch on safe.
+> go to cabinet 1
+The cabinet 1 is closed.
+> open cabinet 1
+You open the cabinet 1. The cabinet 1 is open. In it, you see a tissuebox 1.
+> go to drawer 1
+The drawer 1 is closed.
+> go to drawer 2
+The drawer 2 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to armchair 1
+On the armchair 1, you see a cellphone 2, a laptop 1, and a pillow 1.
+> go to sofa 1
+On the sofa 1, you see a box 2, and a remotecontrol 2.
+> go to dresser 1
+On the dresser 1, you see a cellphone 1, a newspaper 1, a remotecontrol 1, and a statue 1.
+> go to safe 1
+The safe 1 is closed.
+> go to cabinet 3
+The cabinet 3 is closed.
+> open cabinet 3
+You open the cabinet 3. The cabinet 3 is open. In it, you see nothing.
+> go to drawer 1
+The drawer 1 is closed.
+> go to armchair 1
+On the armchair 1, you see a cellphone 2, a laptop 1, and a pillow 1.
+> go to drawer 3
+The drawer 3 is closed.
+> go to cabinet 3
+The cabinet 3 is open. In it, you see nothing.
+> go to drawer 4
+The drawer 4 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #82: Success
+
+#####
+
+#####
+
+Environment #83: Success
+
+#####
+
+#####
+
+Environment #84: Success
+
+#####
+
+#####
+
+Environment #85:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.
+Your task is to: put two cd in safe.
+> go to drawer 5
+On the drawer 5, you see a cd 3, and a pen 2.
+> take cd 3 from drawer 5
+You pick up the cd 3 from the drawer 5.
+> go to bed 1
+On the bed 1, you see a book 2, a book 1, a cellphone 1, a laptop 2, a laptop 1, and a pillow 1.
+> go to desk 1
+On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pen 1.
+> go to drawer 6
+The drawer 6 is closed.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a creditcard 1.
+> go to bed 1
+On the bed 1, you see a book 2, a book 1, a cellphone 1, a laptop 2, a laptop 1, and a pillow 1.
+> go to drawer 5
+On the drawer 5, you see a pen 2.
+> go to shelf 2
+On the shelf 2, you see nothing.
+> go to shelf 1
+On the shelf 1, you see a alarmclock 1.
+> go to drawer 6
+The drawer 6 is closed.
+> go to bed 1
+On the bed 1, you see a book 2, a book 1, a cellphone 1, a laptop 2, a laptop 1, and a pillow 1.
+> go to desk 2
+On the desk 2, you see a bowl 2, a cd 2, a cd 1, a creditcard 3, a mug 2, a pencil 3, and a pencil 2.
+> go to drawer 4
+The drawer 4 is closed.
+> go to desk 1
+On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pen 1.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #86: Success
+
+#####
+
+#####
+
+Environment #87: Success
+
+#####
+
+#####
+
+Environment #88: Success
+
+#####
+
+#####
+
+Environment #89: Success
+
+#####
+
+#####
+
+Environment #90: Success
+
+#####
+
+#####
+
+Environment #91: Success
+
+#####
+
+#####
+
+Environment #92: Success
+
+#####
+
+#####
+
+Environment #93: Success
+
+#####
+
+#####
+
+Environment #94: Success
+
+#####
+
+#####
+
+Environment #95: Success
+
+#####
+
+#####
+
+Environment #96: Success
+
+#####
+
+#####
+
+Environment #97: Success
+
+#####
+
+#####
+
+Environment #98: Success
+
+#####
+
+#####
+
+Environment #99: Success
+
+#####
+
+#####
+
+Environment #100: Success
+
+#####
+
+#####
+
+Environment #101: Success
+
+#####
+
+#####
+
+Environment #102: Success
+
+#####
+
+#####
+
+Environment #103: Success
+
+#####
+
+#####
+
+Environment #104: Success
+
+#####
+
+#####
+
+Environment #105: Success
+
+#####
+
+#####
+
+Environment #106: Success
+
+#####
+
+#####
+
+Environment #107: Success
+
+#####
+
+#####
+
+Environment #108:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
+Your task is to: put two soapbar in garbagecan.
+> go to cabinet 3
+The cabinet 3 is closed.
+> go to cabinet 1
+The cabinet 1 is closed.
+> go to cabinet 3
+The cabinet 3 is closed.
+> go to garbagecan 1
+On the garbagecan 1, you see nothing.
+> go to cabinet 4
+The cabinet 4 is closed.
+> go to cabinet 3
+The cabinet 3 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to countertop 1
+On the countertop 1, you see a candle 3, a candle 1, a soapbottle 1, and a spraybottle 2.
+> take soapbottle 1 from countertop 1
+You pick up the soapbottle 1 from the countertop 1.
+> go to garbagecan 1
+On the garbagecan 1, you see nothing.
+> put soapbottle 1 in/on garbagecan 1
+You put the soapbottle 1 in/on the garbagecan 1.
+> go to handtowelholder 1
+On the handtowelholder 1, you see a handtowel 1.
+> go to cabinet 3
+The cabinet 3 is closed.
+> go to countertop 1
+On the countertop 1, you see a candle 3, a candle 1, and a spraybottle 2.
+> take candle 1 from countertop 1
+You pick up the candle 1 from the countertop 1.
+> go to garbagecan 1
+On the garbagecan 1, you see a soapbottle 1.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #109: Success
+
+#####
+
+#####
+
+Environment #110: Success
+
+#####
+
+#####
+
+Environment #111: Success
+
+#####
+
+#####
+
+Environment #112: Success
+
+#####
+
+#####
+
+Environment #113:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> clean apple 3 with sinkbasin 1
+You clean the apple 3 using the sinkbasin 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a clean lettuce in diningtable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 3, a egg 2, a potato 3, and a potato 2.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a lettuce 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> take lettuce 1 from diningtable 1
+You pick up the lettuce 1 from the diningtable 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a apple 2, a ladle 2, a spoon 1, and a tomato 3.
+> clean lettuce 1 with sinkbasin 1
+You clean the lettuce 1 using the sinkbasin 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> put lettuce 1 in/on diningtable 1
+You put the lettuce 1 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a clean egg in microwave.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 4
+On the cabinet 4, you see a glassbottle 2, and a mug 1.
+> go to cabinet 3
+On the cabinet 3, you see a glassbottle 1.
+> go to countertop 3
+On the countertop 3, you see a bread 3, a bread 2, a butterknife 3, a butterknife 2, a cellphone 1, a egg 1, a fork 3, a houseplant 1, a mug 3, and a statue 1.
+> take egg 1 from countertop 3
+You pick up the egg 1 from the countertop 3.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a bowl 3, a spatula 2, and a spatula 1.
+> clean egg 1 with sinkbasin 1
+You clean the egg 1 using the sinkbasin 1.
+> go to microwave 1
+The microwave 1 is closed.
+> open microwave 1
+You open the microwave 1. The microwave 1 is open. In it, you see a mug 2.
+> put egg 1 in/on microwave 1
+You put the egg 1 in/on the microwave 1.
+
+STATUS: OK
+
+#####
+
+#####
+
+Environment #114:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
+Your task is to: find two toiletpaper and put them in cabinet.
+> go to countertop 1
+On the countertop 1, you see a candle 3, a candle 1, a soapbottle 1, a spraybottle 2, and a toiletpaper 1.
+> take toiletpaper 1 from countertop 1
+You pick up the toiletpaper 1 from the countertop 1.
+> go to toiletpaperhanger 1
+On the toiletpaperhanger 1, you see nothing.
+> go to garbagecan 1
+On the garbagecan 1, you see nothing.
+> go to cabinet 1
+The cabinet 1 is closed.
+> go to handtowelholder 1
+On the handtowelholder 1, you see nothing.
+> go to toilet 1
+On the toilet 1, you see a soapbar 3, a soapbar 2, and a toiletpaper 3.
+> go to cabinet 1
+The cabinet 1 is closed.
+> open cabinet 1
+You open the cabinet 1. The cabinet 1 is open. In it, you see a candle 2, and a cloth 1.
+> put toiletpaper 1 in/on cabinet 1
+You put the toiletpaper 1 in/on the cabinet 1.
+> go to toilet 1
+On the toilet 1, you see a soapbar 3, a soapbar 2, and a toiletpaper 3.
+> take toiletpaper 3 from toilet 1
+You pick up the toiletpaper 3 from the toilet 1.
+> go to cabinet 1
+The cabinet 1 is open. In it, you see a candle 2, a cloth 1, and a toiletpaper 1.
+> put toiletpaper 3 in/on cabinet 1
+You put the toiletpaper 3 in/on the cabinet 1.
+
+STATUS: OK
+
+#####
+
+#####
+
+Environment #115: Success
+
+#####
+
+#####
+
+Environment #116: Success
+
+#####
+
+#####
+
+Environment #117: Success
+
+#####
+
+#####
+
+Environment #118: Success
+
+#####
+
+#####
+
+Environment #119: Success
+
+#####
+
+#####
+
+Environment #120:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, and a sofa 1.
+Your task is to: put two keychain in safe.
+> go to shelf 1
+On the shelf 1, you see nothing.
+> go to armchair 1
+On the armchair 1, you see a cellphone 3, and a pillow 1.
+> go to cabinet 1
+The cabinet 1 is closed.
+> open cabinet 1
+You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.
+> go to drawer 3
+The drawer 3 is closed.
+> go to cabinet 1
+The cabinet 1 is open. In it, you see nothing.
+> go to cabinet 4
+The cabinet 4 is closed.
+> open cabinet 4
+You open the cabinet 4. The cabinet 4 is open. In it, you see a vase 2.
+> go to drawer 3
+The drawer 3 is closed.
+> go to cabinet 1
+The cabinet 1 is open. In it, you see nothing.
+> go to drawer 3
+The drawer 3 is closed.
+> go to cabinet 3
+The cabinet 3 is closed.
+> go to drawer 1
+The drawer 1 is closed.
+> go to cabinet 3
+The cabinet 3 is closed.
+> go to armchair 1
+On the armchair 1, you see a cellphone 3, and a pillow 1.
+> go to cabinet 4
+The cabinet 4 is open. In it, you see a vase 2.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #121:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some apple and put it in sidetable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 2, a mug 2, a potato 2, and a tomato 1.
+> go to diningtable 1
+On the diningtable 1, you see nothing.
+> go to diningtable 2
+On the diningtable 2, you see a pineapple 1.
+> go to diningtable 3
+On the diningtable 3, you see a bowl 2, a bowl 1, a bread 2, and a bread 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> go to countertop 1
+On the countertop 1, you see a butterknife 1, a dishsponge 1, and a soapbottle 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 3, and a egg 3.
+> take apple 3 from garbagecan 1
+You pick up the apple 3 from the garbagecan 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a cup 2, a egg 1, a mug 1, and a potato 3.
+> clean apple 3 with sinkbasin 1
+You clean the apple 3 using the sinkbasin 1.
+> go to sidetable 1
+On the sidetable 1, you see a cup 1, a lettuce 1, a peppershaker 3, a potato 1, and a saltshaker 1.
+> put apple 3 in/on sidetable 1
+You put the apple 3 in/on the sidetable 1.
+You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: put a clean lettuce in diningtable.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a cup 3, a egg 2, a potato 3, and a potato 2.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a lettuce 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> take lettuce 1 from diningtable 1
+You pick up the lettuce 1 from the diningtable 1.
+> go to sinkbasin 1
+On the sinkbasin 1, you see a apple 2, a ladle 2, a spoon 1, and a tomato 3.
+> clean lettuce 1 with sinkbasin 1
+You clean the lettuce 1 using the sinkbasin 1.
+> go to diningtable 1
+On the diningtable 1, you see a apple 1, a bread 1, a butterknife 2, a cup 2, a fork 2, a knife 2, a knife 1, a ladle 1, a mug 2, a mug 1, a pan 2, a peppershaker 1, a spatula 3, a tomato 2, and a tomato 1.
+> put lettuce 1 in/on diningtable 1
+You put the lettuce 1 in/on the diningtable 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: clean some pan and put it in countertop.
+> go to cabinet 3
+On the cabinet 3, you see a bowl 1, and a peppershaker 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 1
+On the cabinet 1, you see a glassbottle 1, a mug 1, and a vase 2.
+> go to cabinet 4
+On the cabinet 4, you see a vase 1.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to drawer 1
+The drawer 1 is closed.
+> go to cabinet 1
+On the cabinet 1, you see a glassbottle 1, a mug 1, and a vase 2.
+> go to drawer 1
+The drawer 1 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a bowl 1, and a peppershaker 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> go to drawer 1
+The drawer 1 is closed.
+> go to drawer 2
+The drawer 2 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #122:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.
+Your task is to: find two cd and put them in safe.
+> go to desk 2
+On the desk 2, you see a bowl 2, a cd 2, a keychain 2, a mug 3, a mug 2, and a pen 3.
+> take cd 2 from desk 2
+You pick up the cd 2 from the desk 2.
+> go to shelf 5
+On the shelf 5, you see nothing.
+> go to shelf 4
+On the shelf 4, you see nothing.
+> go to shelf 3
+On the shelf 3, you see a alarmclock 2, a desklamp 1, and a mug 1.
+> go to drawer 3
+On the drawer 3, you see nothing.
+> go to drawer 6
+The drawer 6 is closed.
+> go to desk 1
+On the desk 1, you see a alarmclock 2, a bowl 1, a cd 1, a cellphone 1, a desklamp 1, and a mug 1.
+> go to desk 2
+On the desk 2, you see a bowl 2, a keychain 2, a mug 3, a mug 2, and a pen 3.
+> go to drawer 1
+The drawer 1 is closed.
+> go to desk 2
+On the desk 2, you see a bowl 2, a keychain 2, a mug 3, a mug 2, and a pen 3.
+> go to drawer 1
+The drawer 1 is closed.
+> go to drawer 4
+The drawer 4 is closed.
+> go to desk 1
+On the desk 1, you see a alarmclock 2, a bowl 1, a cd 1, a cellphone 1, a desklamp 1, and a mug 1.
+> go to drawer 3
+On the drawer 3, you see nothing.
+> go to drawer 6
+The drawer 6 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #123: Success
+
+#####
+
+#####
+
+Environment #124:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: find two peppershaker and put them in drawer.
+> go to cabinet 1
+On the cabinet 1, you see a dishsponge 1, a glassbottle 1, and a peppershaker 2.
+> take peppershaker 2 from cabinet 1
+You pick up the peppershaker 2 from the cabinet 1.
+> go to drawer 1
+The drawer 1 is closed.
+> go to cabinet 3
+On the cabinet 3, you see a plate 1.
+> go to shelf 1
+On the shelf 1, you see a peppershaker 3, and a saltshaker 2.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see nothing.
+> go to shelf 3
+On the shelf 3, you see a vase 1.
+> go to shelf 2
+On the shelf 2, you see a cup 3, and a vase 2.
+> go to cabinet 3
+On the cabinet 3, you see a plate 1.
+> go to cabinet 4
+On the cabinet 4, you see a peppershaker 1.
+> go to cabinet 5
+The cabinet 5 is closed.
+> go to cabinet 4
+On the cabinet 4, you see a peppershaker 1.
+> go to cabinet 6
+The cabinet 6 is closed.
+> go to cabinet 2
+The cabinet 2 is open. In it, you see nothing.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #125: Success
+
+#####
+
+#####
+
+Environment #126:
+Interact with a household to solve a task. Here are two examples.
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.
+Your task is to: put two cellphone in sofa.
+> go to coffeetable 1
+On the coffeetable 1, you see a box 1, a cellphone 3, and a plate 1.
+> take cellphone 3 from coffeetable 1
+You pick up the cellphone 3 from the coffeetable 1.
+> go to sofa 1
+On the sofa 1, you see a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 3 in/on sofa 1
+You put the cellphone 3 in/on the sofa 1.
+> go to diningtable 1
+On the diningtable 1, you see a cellphone 2, a keychain 2, a laptop 1, a statue 2, and a statue 1.
+> take cellphone 2 from diningtable 1
+You pick up the cellphone 2 from the diningtable 1.
+> go to sofa 1
+On the sofa 1, you see a cellphone 3, a newspaper 2, a pillow 1, a remotecontrol 2, and a remotecontrol 1.
+> put cellphone 2 in/on sofa 1
+You put the cellphone 2 in/on the sofa 1.
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a bed 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a sidetable 1.
+Your task is to: put two creditcard in dresser.
+> go to drawer 1
+The drawer 1 is closed.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a book 1, a cd 1, and a pen 1.
+> go to drawer 2
+The drawer 2 is closed.
+> open drawer 2
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a creditcard 2, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 2 from countertop 1
+You pick up the creditcard 2 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a mug 1, and a television 1.
+> put creditcard 2 in/on dresser 1
+You put the creditcard 2 in/on the dresser 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 2, a creditcard 4, a creditcard 3, a mirror 1, a pencil 2, and a pencil 1.
+> take creditcard 3 from countertop 1
+You pick up the creditcard 3 from the countertop 1.
+> go to dresser 1
+On the dresser 1, you see a creditcard 2, a mug 1, and a television 1.
+> put creditcard 3 in/on dresser 1
+You put the creditcard 3 in/on the dresser 1.
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.
+Your task is to: find two soapbar and put them in cabinet.
+> go to countertop 1
+On the countertop 1, you see a soapbar 1, a soapbottle 1, a spraybottle 1, and a toiletpaper 1.
+> take soapbar 1 from countertop 1
+You pick up the soapbar 1 from the countertop 1.
+> go to cabinet 1
+The cabinet 1 is closed.
+> open cabinet 1
+You open the cabinet 1. The cabinet 1 is open. In it, you see a cloth 1.
+> put soapbar 1 in/on cabinet 1
+You put the soapbar 1 in/on the cabinet 1.
+> go to countertop 1
+On the countertop 1, you see a soapbottle 1, a spraybottle 1, and a toiletpaper 1.
+> go to cabinet 1
+The cabinet 1 is open. In it, you see a cloth 1, and a soapbar 1.
+> take soapbar 1 from cabinet 1
+You pick up the soapbar 1 from the cabinet 1.
+> go to cabinet 3
+The cabinet 3 is closed.
+> open cabinet 3
+You open the cabinet 3. The cabinet 3 is open. In it, you see a toiletpaper 2.
+> put soapbar 1 in/on cabinet 3
+You put the soapbar 1 in/on the cabinet 3.
+> go to cabinet 1
+The cabinet 1 is open. In it, you see a cloth 1.
+> go to countertop 1
+On the countertop 1, you see a soapbottle 1, a spraybottle 1, and a toiletpaper 1.
+> go to cabinet 2
+The cabinet 2 is closed.
+> open cabinet 2
+You open the cabinet 2. The cabinet 2 is open. In it, you see a spraybottle 2.
+> go to cabinet 4
+The cabinet 4 is closed.
+
+STATUS: FAIL
+
+#####
+
+#####
+
+Environment #127: Success
+
+#####
+
+#####
+
+Environment #128: Success
+
+#####
+
+#####
+
+Environment #129: Success
+
+#####
+
+#####
+
+Environment #130: Success
+
+#####
+
+#####
+
+Environment #131: Success
+
+#####
+
+#####
+
+Environment #132: Success
+
+#####
+
+#####
+
+Environment #133: Success
+
+#####
+
+-----
+SUCCESS: 107
+ADDITIONAL SUCCESS: 6
+FAIL: 27
+TOTAL: 134
+ACCURACY: 0.8
+-----
