@@ -24,7 +24,7 @@ import numpy as np
 import random
 
 
-base_sample_num = 3 # 5
+base_sample_num = 1 # 5
 depth = 2  # depth - 1, as the first layer is not counted
 scale = 0.1
 replan = False
@@ -183,7 +183,9 @@ def alfworld_run(env, base_prompt, memory: List[str], to_print=True, ob='', temp
     env_value_estimate = 0.0
     gamma = 0.9
     task_name, task_class = task
-    while cur_step < 10 + 5 * (sample_per_node // base_sample_num - 1):
+    total_steps = 20 #15
+
+    while cur_step < total_steps:
         temp_history = [copy.deepcopy(env_history) for _ in range(sample_per_node ** depth)]
         temp_admissible = [init_admaction for _ in range(sample_per_node ** depth)]
         temp_reward = [0.0 for _ in range(sample_per_node ** depth)]
@@ -285,7 +287,7 @@ def run_trial(
     ) -> List[Dict[str, Any]]:
     importlib.reload(alfworld)
     importlib.reload(alfworld.agents.environment)
-    sample_per_node = base_sample_num + 2 * trial_idx
+    sample_per_node = base_sample_num + trial_idx
 
     with open('base_config.yaml') as reader:
         config = yaml.safe_load(reader)

@@ -1,11 +1,13 @@
 import re
-string = open("./myoutput_final.txt","r+").read()
+string = open("./myoutput_remaining.txt","r+").read()
 split_str = string.split('\n0 / 134')
-#print(split_str)
+cumulative = 3868
 # Extract the step numbers from the string
 for trail_idx, s in enumerate(split_str):
     steps = re.findall(r'\d+>', s)
-    len_trial = 10 + 5 * (2 * trail_idx // 3)
-    fail = re.findall(r'{len_trial}>', s)
-    print(len(steps))
-    print(steps)
+    fail = re.findall(r'15>', s)
+    success_steps = len(steps) - len(fail) * 16
+   # cumulative += success_steps // 2 * (trail_idx**2 + trail_idx)
+    tt = trail_idx + 9
+    cumulative += success_steps // 2 * (tt**2 + tt)
+    print(cumulative, tt)

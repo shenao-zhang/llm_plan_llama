@@ -9,7 +9,7 @@ from typing import Any, List, Dict
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--num_trials", type=int, default=10, help="The number of trials to run")
+    parser.add_argument("--num_trials", type=int, default=13, help="The number of trials to run")
     parser.add_argument("--num_envs", type=int, default=134, help="The number of environments per trial")
     parser.add_argument("--run_name", type=str, default='ours_run_logs',help="The name of the run")
     parser.add_argument("--use_memory", action='store_true', help="Allow the Agent to use memory")
